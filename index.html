@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imperium | Financial Services</title>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -32,7 +34,13 @@ nav a:hover{color:#b18434}
 .button.gold:hover{background:#ae8439}
 .button.secondary{background:transparent!important;border:1px solid #fff}
 
-.hero-card,.card,.security-box,.dashboard-panel,.balance-card{background:#fff;border:1px solid #e4e8ef;border-radius:14px;padding:30px}
+.hero-card,.card,.security-box,.dashboard-panel,.balance-card{
+background:#fff;
+border:1px solid #e4e8ef;
+border-radius:14px;
+padding:30px
+}
+
 .hero-card{box-shadow:0 25px 60px rgba(0,0,0,.25);color:#172033}
 .hero-card h2,.card h3,.dashboard-panel h3,.balance-card h3{color:#102747}
 .hero-card p,.card p{color:#667085;font-size:14px;margin:12px 0 18px}
@@ -47,64 +55,242 @@ nav a:hover{color:#b18434}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
 .card{transition:.25s}
 .card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(16,39,71,.1)}
-.icon{width:52px;height:52px;background:#edf2f8;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#b18434;font-size:21px;font-weight:bold;margin-bottom:20px}
+.icon{
+width:52px;
+height:52px;
+background:#edf2f8;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#b18434;
+font-size:21px;
+font-weight:bold;
+margin-bottom:20px
+}
 .card h3{margin-bottom:10px}
 .learn{color:#9a722c;font-weight:700;font-size:14px}
 
 .dark{background:#102747;color:#fff}
 .dark .section-title h2{color:#fff}
 .dark .section-title p{color:#dbe6f4}
-.dark-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);padding:30px;border-radius:12px}
+.dark-card{
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.13);
+padding:30px;
+border-radius:12px
+}
 .dark-card h3{color:#e0bc6c;margin-bottom:10px}
 .dark-card p{color:#dbe6f4;font-size:14px}
 
 .security{max-width:950px;margin:auto}
 .security-box h3{margin-bottom:18px}
-.security-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.security-list li{background:#f5f7fb;padding:15px;border-radius:8px;color:#475467}
-.security-list strong{display:block;color:#102747;margin-bottom:4px}
+.security-list{
+list-style:none;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px
+}
+.security-list li{
+background:#f5f7fb;
+padding:15px;
+border-radius:8px;
+color:#475467
+}
+.security-list strong{
+display:block;
+color:#102747;
+margin-bottom:4px
+}
 
 .about{background:#fff}
 .about-content{max-width:900px;margin:auto;text-align:center}
 .about-content h2{font-size:38px;color:#102747;margin-bottom:20px}
 .about-content p{color:#667085;margin-bottom:15px}
 
-.contact{background:linear-gradient(135deg,#102747,#183d68);color:#fff;text-align:center;padding:80px 25px}
+.contact{
+background:linear-gradient(135deg,#102747,#183d68);
+color:#fff;
+text-align:center;
+padding:80px 25px
+}
 .contact h2{font-size:38px;margin-bottom:15px}
 .contact p{color:#dbe6f4;margin-bottom:28px}
 
-footer{background:#091a30;color:#aeb9c8;padding:35px 25px;text-align:center;font-size:13px}
+footer{
+background:#091a30;
+color:#aeb9c8;
+padding:35px 25px;
+text-align:center;
+font-size:13px
+}
 footer strong{color:#fff}
 
-.modal{display:none;position:fixed;inset:0;background:rgba(5,18,35,.75);z-index:3000;align-items:center;justify-content:center;padding:20px}
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(5,18,35,.75);
+z-index:3000;
+align-items:center;
+justify-content:center;
+padding:20px
+}
 .modal.show{display:flex}
-.login-box{background:#fff;width:100%;max-width:460px;border-radius:15px;padding:35px;position:relative;box-shadow:0 25px 70px rgba(0,0,0,.3)}
-.close{position:absolute;top:12px;right:18px;border:0;background:transparent;font-size:27px;cursor:pointer;color:#667085}
+
+.login-box{
+background:#fff;
+width:100%;
+max-width:460px;
+border-radius:15px;
+padding:35px;
+position:relative;
+box-shadow:0 25px 70px rgba(0,0,0,.3)
+}
+
+.close{
+position:absolute;
+top:12px;
+right:18px;
+border:0;
+background:transparent;
+font-size:27px;
+cursor:pointer;
+color:#667085
+}
+
 .login-box h2{color:#102747;margin-bottom:7px}
 .login-box>p{color:#667085;font-size:14px;margin-bottom:25px}
+
 .form-group{margin-bottom:18px}
-.form-group label{display:block;font-weight:700;color:#344054;margin-bottom:7px;font-size:14px}
-.form-group input{width:100%;padding:13px;border:1px solid #d0d5dd;border-radius:7px;outline:none;font-size:15px}
+.form-group label{
+display:block;
+font-weight:700;
+color:#344054;
+margin-bottom:7px;
+font-size:14px
+}
+
+.form-group input{
+width:100%;
+padding:13px;
+border:1px solid #d0d5dd;
+border-radius:7px;
+outline:none;
+font-size:15px
+}
+
 .form-group input:focus{border-color:#102747}
+
 .full{width:100%;margin-top:5px}
-.form-options{display:flex;justify-content:space-between;margin:12px 0 20px;font-size:13px;color:#667085}
-.form-options a{color:#9a722c;font-weight:700}
-.message{padding:12px;border-radius:8px;margin-bottom:18px;font-size:13px;display:none}
-.message.error{display:block;background:#fff0f0;color:#9b3030;border:1px solid #efc1c1}
-.message.success{display:block;background:#effaf3;color:#26734d;border:1px solid #b9dfc6}
+
+.form-options{
+display:flex;
+justify-content:space-between;
+margin:12px 0 20px;
+font-size:13px;
+color:#667085
+}
+
+.form-options a{
+color:#9a722c;
+font-weight:700
+}
+
+.message{
+padding:12px;
+border-radius:8px;
+margin-bottom:18px;
+font-size:13px;
+display:none
+}
+
+.message.error{
+display:block;
+background:#fff0f0;
+color:#9b3030;
+border:1px solid #efc1c1
+}
+
+.message.success{
+display:block;
+background:#effaf3;
+color:#26734d;
+border:1px solid #b9dfc6
+}
+
 .hidden{display:none!important}
 
-.dashboard{display:none;background:#f5f7fb;min-height:100vh;padding-bottom:80px}
+.dashboard{
+display:none;
+background:#f5f7fb;
+min-height:100vh;
+padding-bottom:80px
+}
+
 .dashboard.show{display:block}
-.dashboard-header{background:#102747;color:#fff;padding:30px 25px}
-.dashboard-header-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.dashboard-header p{color:#dbe6f4;font-size:14px}
-.signout{background:#fff;color:#102747;border:0;padding:10px 17px;border-radius:6px;cursor:pointer;font-weight:700}
-.dashboard-content{max-width:1200px;margin:auto;padding:40px 25px}
-.balance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:30px}
-.balance-card span{color:#667085;font-size:13px}
-.balance-card h3{font-size:27px;margin-top:7px}
-.transaction{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #edf0f4;font-size:14px}
+
+.dashboard-header{
+background:#102747;
+color:#fff;
+padding:30px 25px
+}
+
+.dashboard-header-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px
+}
+
+.dashboard-header p{
+color:#dbe6f4;
+font-size:14px
+}
+
+.signout{
+background:#fff;
+color:#102747;
+border:0;
+padding:10px 17px;
+border-radius:6px;
+cursor:pointer;
+font-weight:700
+}
+
+.dashboard-content{
+max-width:1200px;
+margin:auto;
+padding:40px 25px
+}
+
+.balance-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-bottom:30px
+}
+
+.balance-card span{
+color:#667085;
+font-size:13px
+}
+
+.balance-card h3{
+font-size:27px;
+margin-top:7px
+}
+
+.transaction{
+display:flex;
+justify-content:space-between;
+padding:14px 0;
+border-bottom:1px solid #edf0f4;
+font-size:14px
+}
+
 .transaction:last-child{border-bottom:0}
 .positive{color:#26734d;font-weight:700}
 .negative{color:#a33d3d;font-weight:700}
@@ -116,6 +302,7 @@ nav{display:none}
 .hero h1{font-size:42px}
 .grid,.balance-grid{grid-template-columns:1fr 1fr}
 }
+
 @media(max-width:600px){
 .nav{padding:14px 17px}
 .logo{font-size:23px}
@@ -129,11 +316,18 @@ nav{display:none}
 }
 </style>
 </head>
+
 <body>
+
 <div id="mainWebsite">
+
 <header>
 <div class="nav">
-<a href="#home" class="logo">IMPERIUM<span>.</span></a>
+
+<a href="#home" class="logo">
+IMPERIUM<span>.</span>
+</a>
+
 <nav>
 <a href="#home">Home</a>
 <a href="#personal">Personal</a>
@@ -142,22 +336,54 @@ nav{display:none}
 <a href="#international">International</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-<a href="#" class="client-btn" onclick="openLogin();return false">Client Access</a>
+
+<a href="#" class="client-btn" onclick="openLogin();return false">
+Client Access
+</a>
+
 </nav>
 </div>
 </header>
+
+
 <section class="hero" id="home">
+
 <div class="hero-content">
+
 <div>
-<div class="eyebrow">MODERN FINANCIAL SERVICES</div>
-<h1>Financial solutions built around <span>your future.</span></h1>
-<p>Imperium provides a modern digital financial-services experience designed around individuals, businesses, investments and long-term financial planning.</p>
-<a href="#personal" class="button gold">Explore Services</a>
-<a href="#contact" class="button secondary">Contact Us</a>
+
+<div class="eyebrow">
+MODERN FINANCIAL SERVICES
 </div>
+
+<h1>
+Financial solutions built around
+<span>your future.</span>
+</h1>
+
+<p>
+Imperium provides a modern digital financial-services experience designed around individuals, businesses, investments and long-term financial planning.
+</p>
+
+<a href="#personal" class="button gold">
+Explore Services
+</a>
+
+<a href="#contact" class="button secondary">
+Contact Us
+</a>
+
+</div>
+
+
 <div class="hero-card">
+
 <h2>Welcome to Imperium</h2>
-<p>Explore our range of financial-service solutions and access your client portal securely.</p>
+
+<p>
+Explore our range of financial-service solutions and access your client portal securely.
+</p>
+
 <ul class="hero-list">
 <li>Personal financial services</li>
 <li>Savings and account solutions</li>
@@ -166,216 +392,636 @@ nav{display:none}
 <li>Business financial services</li>
 <li>Secure digital client access</li>
 </ul>
-<a href="#personal" class="button">Explore Services</a>
+
+<a href="#personal" class="button">
+Explore Services
+</a>
+
 </div>
+
 </div>
 </section>
+
+
 <section id="personal">
+
 <div class="section">
+
 <div class="section-title">
+
 <h2>Personal Services</h2>
-<p>Financial solutions designed to support everyday financial management and longer-term goals.</p>
+
+<p>
+Financial solutions designed to support everyday financial management and longer-term goals.
+</p>
+
 </div>
+
 <div class="grid">
-<div class="card"><div class="icon">£</div><h3>Current Account</h3><p>Everyday account services for payments, transfers and financial management.</p><a href="#contact" class="learn">Learn More →</a></div>
-<div class="card"><div class="icon">S</div><h3>Savings</h3><p>Structured savings solutions designed around short-term and long-term financial objectives.</p><a href="#contact" class="learn">Learn More →</a></div>
-<div class="card"><div class="icon">P</div><h3>Personal Finance</h3><p>Financial solutions designed around eligible personal requirements.</p><a href="#contact" class="learn">Learn More →</a></div>
-<div class="card"><div class="icon">I</div><h3>Investment Services</h3><p>Investment-focused services for clients working toward longer-term financial objectives.</p><a href="#investments" class="learn">Explore →</a></div>
-<div class="card"><div class="icon">↔</div><h3>International Transfers</h3><p>Cross-border transfer services for supported international financial activity.</p><a href="#international" class="learn">Learn More →</a></div>
-<div class="card"><div class="icon">▣</div><h3>Card Services</h3><p>Digital access to supported payment and card-related services.</p><a href="#contact" class="learn">Learn More →</a></div>
+
+<div class="card">
+<div class="icon">£</div>
+<h3>Current Account</h3>
+<p>Everyday account services for payments, transfers and financial management.</p>
+<a href="#contact" class="learn">Learn More →</a>
+</div>
+
+<div class="card">
+<div class="icon">S</div>
+<h3>Savings</h3>
+<p>Structured savings solutions designed around short-term and long-term financial objectives.</p>
+<a href="#contact" class="learn">Learn More →</a>
+</div>
+
+<div class="card">
+<div class="icon">P</div>
+<h3>Personal Finance</h3>
+<p>Financial solutions designed around eligible personal requirements.</p>
+<a href="#contact" class="learn">Learn More →</a>
+</div>
+
+<div class="card">
+<div class="icon">I</div>
+<h3>Investment Services</h3>
+<p>Investment-focused services for clients working toward longer-term financial objectives.</p>
+<a href="#investments" class="learn">Explore →</a>
+</div>
+
+<div class="card">
+<div class="icon">↔</div>
+<h3>International Transfers</h3>
+<p>Cross-border transfer services for supported international financial activity.</p>
+<a href="#international" class="learn">Learn More →</a>
+</div>
+
+<div class="card">
+<div class="icon">▣</div>
+<h3>Card Services</h3>
+<p>Digital access to supported payment and card-related services.</p>
+<a href="#contact" class="learn">Learn More →</a>
+</div>
+
 </div>
 </div>
 </section>
+
+
 <section class="dark" id="business">
+
 <div class="section">
+
 <div class="section-title">
+
 <h2>Business Services</h2>
-<p>Professional financial solutions designed around business and organisational requirements.</p>
+
+<p>
+Professional financial solutions designed around business and organisational requirements.
+</p>
+
 </div>
+
 <div class="grid">
-<div class="dark-card"><h3>Business Accounts</h3><p>Account solutions for managing business financial activity and payments.</p></div>
-<div class="dark-card"><h3>Business Payments</h3><p>Payment and transfer services designed around business operations.</p></div>
-<div class="dark-card"><h3>Financial Services</h3><p>Solutions supporting business financial planning and objectives.</p></div>
+
+<div class="dark-card">
+<h3>Business Accounts</h3>
+<p>Account solutions for managing business financial activity and payments.</p>
+</div>
+
+<div class="dark-card">
+<h3>Business Payments</h3>
+<p>Payment and transfer services designed around business operations.</p>
+</div>
+
+<div class="dark-card">
+<h3>Financial Services</h3>
+<p>Solutions supporting business financial planning and objectives.</p>
+</div>
+
 </div>
 </div>
 </section>
+
+
 <section id="investments">
+
 <div class="section">
+
 <div class="section-title">
+
 <h2>Investments & Wealth Services</h2>
-<p>Services focused on investment planning, portfolio objectives and long-term financial goals.</p>
+
+<p>
+Services focused on investment planning, portfolio objectives and long-term financial goals.
+</p>
+
 </div>
+
 <div class="grid">
-<div class="card"><div class="icon">I</div><h3>Investment Accounts</h3><p>Investment-oriented account services for supported client objectives.</p></div>
-<div class="card"><div class="icon">W</div><h3>Wealth Services</h3><p>Long-term financial planning and wealth-management support.</p></div>
-<div class="card"><div class="icon">P</div><h3>Financial Planning</h3><p>Structured planning support for informed financial decisions.</p></div>
+
+<div class="card">
+<div class="icon">I</div>
+<h3>Investment Accounts</h3>
+<p>Investment-oriented account services for supported client objectives.</p>
+</div>
+
+<div class="card">
+<div class="icon">W</div>
+<h3>Wealth Services</h3>
+<p>Long-term financial planning and wealth-management support.</p>
+</div>
+
+<div class="card">
+<div class="icon">P</div>
+<h3>Financial Planning</h3>
+<p>Structured planning support for informed financial decisions.</p>
+</div>
+
 </div>
 </div>
 </section>
+
+
 <section id="international">
+
 <div class="section">
+
 <div class="section-title">
+
 <h2>International Services</h2>
-<p>Services supporting eligible clients with cross-border financial activity.</p>
+
+<p>
+Services supporting eligible clients with cross-border financial activity.
+</p>
+
 </div>
+
 <div class="grid">
-<div class="card"><div class="icon">↔</div><h3>International Transfers</h3><p>Supported international payment and transfer services.</p></div>
-<div class="card"><div class="icon">FX</div><h3>Currency Services</h3><p>Currency-related services for supported international transactions.</p></div>
-<div class="card"><div class="icon">G</div><h3>Global Support</h3><p>Support for financial activity involving multiple countries.</p></div>
+
+<div class="card">
+<div class="icon">↔</div>
+<h3>International Transfers</h3>
+<p>Supported international payment and transfer services.</p>
+</div>
+
+<div class="card">
+<div class="icon">FX</div>
+<h3>Currency Services</h3>
+<p>Currency-related services for supported international transactions.</p>
+</div>
+
+<div class="card">
+<div class="icon">G</div>
+<h3>Global Support</h3>
+<p>Support for financial activity involving multiple countries.</p>
+</div>
+
 </div>
 </div>
 </section>
+
+
 <section>
+
 <div class="section">
+
 <div class="section-title">
+
 <h2>Digital Security</h2>
-<p>Client access uses modern authentication and database-access controls.</p>
+
+<p>
+Client access uses modern authentication and database-access controls.
+</p>
+
 </div>
+
 <div class="security">
+
 <div class="security-box">
+
 <h3>Security Features</h3>
+
 <ul class="security-list">
-<li><strong>Authentication</strong>Client accounts are authenticated through Supabase Auth.</li>
-<li><strong>Session Management</strong>Authenticated sessions are managed by Supabase.</li>
-<li><strong>Row Level Security</strong>Database access is restricted using Supabase RLS policies.</li>
-<li><strong>Sign Out</strong>Clients can securely terminate their active session.</li>
-<li><strong>Database Protection</strong>Private service-role credentials are not exposed in the website.</li>
-<li><strong>HTTPS</strong>The website should be served over HTTPS in production.</li>
+
+<li>
+<strong>Authentication</strong>
+Client accounts are authenticated through Supabase Auth.
+</li>
+
+<li>
+<strong>Session Management</strong>
+Authenticated sessions are managed by Supabase.
+</li>
+
+<li>
+<strong>Row Level Security</strong>
+Database access is restricted using Supabase RLS policies.
+</li>
+
+<li>
+<strong>Sign Out</strong>
+Clients can securely terminate their active session.
+</li>
+
+<li>
+<strong>Database Protection</strong>
+Private service-role credentials are not exposed in the website.
+</li>
+
+<li>
+<strong>HTTPS</strong>
+The website should be served over HTTPS in production.
+</li>
+
 </ul>
+
 </div>
 </div>
 </div>
 </section>
+
+
 <section class="about" id="about">
+
 <div class="section">
+
 <div class="about-content">
+
 <h2>About Imperium</h2>
-<p>Imperium is focused on providing a modern and professional digital financial-services experience.</p>
-<p>Our approach centres on clarity, responsible financial planning, convenient digital services and client-focused support.</p>
+
+<p>
+Imperium is focused on providing a modern and professional digital financial-services experience.
+</p>
+
+<p>
+Our approach centres on clarity, responsible financial planning, convenient digital services and client-focused support.
+</p>
+
 </div>
+
 </div>
 </section>
+
+
 <section class="contact" id="contact">
+
 <h2>Let's Talk</h2>
-<p>Have a question about Imperium's services? Get in touch.</p>
-<a href="mailto:contact@imperium.example" class="button gold">Contact Imperium</a>
+
+<p>
+Have a question about Imperium's services? Get in touch.
+</p>
+
+<a href="mailto:contact@imperium.example" class="button gold">
+Contact Imperium
+</a>
+
 </section>
+
+
 <footer>
-<p>© 2026 <strong>Imperium</strong>. All rights reserved.</p>
-<p style="margin-top:8px">Digital financial-services platform.</p>
+
+<p>
+© 2026 <strong>Imperium</strong>. All rights reserved.
+</p>
+
+<p style="margin-top:8px">
+Digital financial-services platform.
+</p>
+
 </footer>
+
 </div>
+
+
+<!-- LOGIN MODAL -->
+
 <div class="modal" id="loginModal">
+
 <div class="login-box">
-<button class="close" onclick="closeLogin()">×</button>
+
+<button class="close" onclick="closeLogin()">
+×
+</button>
+
+
+<!-- LOGIN SCREEN -->
+
 <div id="loginScreen">
+
 <h2>Client Access</h2>
-<p>Sign in securely to your Imperium client portal.</p>
+
+<p>
+Sign in securely to your Imperium client portal.
+</p>
+
 <div id="loginMessage" class="message"></div>
-<form onsubmit="signIn(event)">
+
+
+<form id="loginForm" onsubmit="signIn(event)">
+
 <div class="form-group">
-<label for="email">Email Address</label>
-<input id="email" type="email" autocomplete="email" required placeholder="Enter your email address">
+
+<label for="email">
+Email Address
+</label>
+
+<input
+id="email"
+type="email"
+autocomplete="email"
+required
+placeholder="Enter your email address"
+>
+
 </div>
+
+
 <div class="form-group">
-<label for="password">Password</label>
-<input id="password" type="password" autocomplete="current-password" required placeholder="Enter your password">
+
+<label for="password">
+Password
+</label>
+
+<input
+id="password"
+type="password"
+autocomplete="current-password"
+required
+placeholder="Enter your password"
+>
+
 </div>
+
+
+<button
+type="submit"
+id="loginButton"
+class="button full"
+>
 Sign In
+</button>
 
 </form>
+
+
 <div class="form-options">
+
 <span></span>
-<a href="#" onclick="showRegistration();return false">Create account</a>
+
+<a href="#" onclick="showRegistration();return false">
+Create account
+</a>
+
 </div>
+
 </div>
+
+
+<!-- REGISTRATION SCREEN -->
+
 <div id="registerScreen" class="hidden">
+
 <h2>Create Client Account</h2>
-<p>Create your secure client-access account.</p>
+
+<p>
+Create your secure client-access account.
+</p>
+
 <div id="registerMessage" class="message"></div>
-<form onsubmit="register(event)">
+
+
+<form id="registerForm" onsubmit="register(event)">
+
 <div class="form-group">
-<label for="registerName">Full Name</label>
-<input id="registerName" type="text" autocomplete="name" required placeholder="Full name">
+
+<label for="registerName">
+Full Name
+</label>
+
+<input
+id="registerName"
+type="text"
+autocomplete="name"
+required
+placeholder="Full name"
+>
+
 </div>
+
+
 <div class="form-group">
-<label for="registerEmail">Email Address</label>
-<input id="registerEmail" type="email" autocomplete="email" required placeholder="Email address">
+
+<label for="registerEmail">
+Email Address
+</label>
+
+<input
+id="registerEmail"
+type="email"
+autocomplete="email"
+required
+placeholder="Email address"
+>
+
 </div>
+
+
 <div class="form-group">
-<label for="registerPassword">Password</label>
-<input id="registerPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="Minimum 8 characters">
+
+<label for="registerPassword">
+Password
+</label>
+
+<input
+id="registerPassword"
+type="password"
+autocomplete="new-password"
+minlength="8"
+required
+placeholder="Minimum 8 characters"
+>
+
 </div>
+
+
+<button
+type="submit"
+id="registerButton"
+class="button full"
+>
 Create Account
+</button>
 
 </form>
-<div class="form-options">
-<a href="#" onclick="showLogin();return false">← Back to sign in</a>
-</div>
-</div>
-</div>
-</div>
-<section class="dashboard" id="dashboard">
-<div class="dashboard-header">
-<div class="dashboard-header-inner">
-<div>
-<h2>Imperium Client Portal</h2>
-<p id="clientWelcome">Authenticated client</p>
-</div>
-<button class="signout" onclick="signOut()">Sign Out</button>
-</div>
-</div>
-<div class="dashboard-content">
-<div id="dashboardMessage" class="message"></div>
-<div class="balance-grid">
-<div class="balance-card">
-<span>Current Account</span>
-<h3 id="currentBalance">£0.00</h3>
-<div class="account-number" id="currentAccountNumber"></div>
-</div>
-<div class="balance-card">
-<span>Savings Account</span>
-<h3 id="savingsBalance">£0.00</h3>
-<div class="account-number" id="savingsAccountNumber"></div>
-</div>
-<div class="balance-card">
-<span>Investment Account</span>
-<h3 id="investmentBalance">£0.00</h3>
-<div class="account-number" id="investmentAccountNumber"></div>
-</div>
-</div>
-<div class="dashboard-panel">
-<h3>Recent Activity</h3>
-<div id="transactionsList">
-<p style="color:#667085">Loading account activity...</p>
-</div>
-</div>
-<div class="dashboard-panel">
-<h3>Account Services</h3>
-<p style="color:#667085">Current accounts, savings, investments, transfers and supported digital services.</p>
-</div>
-</div>
-</section>
-<script>
-/* =========================================================
-   SUPABASE CONFIGURATION
-   ========================================================= */
 
-const SUPABASE_URL = "https://cicaewedvqhzyiuhvpsg.supabase.co";
+
+<div class="form-options">
+
+<a href="#" onclick="showLogin();return false">
+← Back to sign in
+</a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- DASHBOARD -->
+
+<section class="dashboard" id="dashboard">
+
+<div class="dashboard-header">
+
+<div class="dashboard-header-inner">
+
+<div>
+
+<h2>
+Imperium Client Portal
+</h2>
+
+<p id="clientWelcome">
+Authenticated client
+</p>
+
+</div>
+
+<button
+class="signout"
+onclick="signOut()"
+>
+Sign Out
+</button>
+
+</div>
+</div>
+
+
+<div class="dashboard-content">
+
+<div id="dashboardMessage" class="message"></div>
+
+
+<div class="balance-grid">
+
+
+<div class="balance-card">
+
+<span>
+Current Account
+</span>
+
+<h3 id="currentBalance">
+£0.00
+</h3>
+
+<div
+class="account-number"
+id="currentAccountNumber">
+</div>
+
+</div>
+
+
+<div class="balance-card">
+
+<span>
+Savings Account
+</span>
+
+<h3 id="savingsBalance">
+£0.00
+</h3>
+
+<div
+class="account-number"
+id="savingsAccountNumber">
+</div>
+
+</div>
+
+
+<div class="balance-card">
+
+<span>
+Investment Account
+</span>
+
+<h3 id="investmentBalance">
+£0.00
+</h3>
+
+<div
+class="account-number"
+id="investmentAccountNumber">
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="dashboard-panel">
+
+<h3>
+Recent Activity
+</h3>
+
+<div id="transactionsList">
+
+<p style="color:#667085">
+Loading account activity...
+</p>
+
+</div>
+
+</div>
+
+
+<div class="dashboard-panel">
+
+<h3>
+Account Services
+</h3>
+
+<p style="color:#667085">
+Current accounts, savings, investments, transfers and supported digital services.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* =========================================================
+SUPABASE CONFIGURATION
+========================================================= */
+
+const SUPABASE_URL =
+"https://cicaewedvqhzyiuhvpsg.supabase.co";
 
 const SUPABASE_PUBLISHABLE_KEY =
 "sb_publishable_Fl3j2OjphHCKuZQpFZQmrQ_jd5dnmQ2";
 
-const { createClient } =
-supabase;
+const { createClient } = supabase;
 
 const supabaseClient =
-createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+createClient(
+SUPABASE_URL,
+SUPABASE_PUBLISHABLE_KEY
+);
 
 
 /* =========================================================
-   ELEMENTS
-   ========================================================= */
+ELEMENTS
+========================================================= */
 
 const loginModal =
 document.getElementById("loginModal");
@@ -394,8 +1040,8 @@ document.getElementById("mainWebsite");
 
 
 /* =========================================================
-   LOGIN MODAL
-   ========================================================= */
+LOGIN MODAL
+========================================================= */
 
 function openLogin(){
 
@@ -439,20 +1085,24 @@ clearMessages();
 
 function clearMessages(){
 
-document.getElementById("loginMessage").className="message";
+const loginMessage =
+document.getElementById("loginMessage");
 
-document.getElementById("loginMessage").textContent="";
+const registerMessage =
+document.getElementById("registerMessage");
 
-document.getElementById("registerMessage").className="message";
+loginMessage.className="message";
+loginMessage.textContent="";
 
-document.getElementById("registerMessage").textContent="";
+registerMessage.className="message";
+registerMessage.textContent="";
 
 }
 
 
 /* =========================================================
-   MESSAGE HELPERS
-   ========================================================= */
+MESSAGE HELPERS
+========================================================= */
 
 function showMessage(id,text,type){
 
@@ -461,34 +1111,49 @@ document.getElementById(id);
 
 element.textContent=text;
 
-element.className="message "+type;
+element.className=
+"message "+type;
 
 }
 
 
 /* =========================================================
-   REGISTER
-   ========================================================= */
+REGISTER
+========================================================= */
 
 async function register(event){
 
 event.preventDefault();
 
 const name =
-document.getElementById("registerName").value.trim();
+document.getElementById("registerName")
+.value
+.trim();
 
 const email =
-document.getElementById("registerEmail").value.trim();
+document.getElementById("registerEmail")
+.value
+.trim();
 
 const password =
-document.getElementById("registerPassword").value;
+document.getElementById("registerPassword")
+.value;
 
 const button =
 document.getElementById("registerButton");
 
+if(!button){
+
+console.error("Register button not found.");
+
+return;
+
+}
+
 button.disabled=true;
 
 button.textContent="Creating account...";
+
 
 try{
 
@@ -507,13 +1172,18 @@ full_name:name
 
 });
 
-if(error) throw error;
+
+if(error){
+
+throw error;
+
+}
 
 
 /*
 If email confirmation is enabled,
-Supabase will ask the user to confirm
-their email before the first login.
+Supabase may require the user to
+confirm their email before login.
 */
 
 if(data.session){
@@ -530,15 +1200,20 @@ showMessage(
 
 }
 
-}catch(error){
+}
+catch(error){
+
+console.error(error);
 
 showMessage(
 "registerMessage",
-error.message || "Unable to create the account.",
+error.message ||
+"Unable to create the account.",
 "error"
 );
 
-}finally{
+}
+finally{
 
 button.disabled=false;
 
@@ -550,27 +1225,51 @@ button.textContent="Create Account";
 
 
 /* =========================================================
-   SIGN IN
-   ========================================================= */
+SIGN IN
+========================================================= */
 
 async function signIn(event){
 
 event.preventDefault();
 
+
 const email =
-document.getElementById("email").value.trim();
+document.getElementById("email")
+.value
+.trim();
+
 
 const password =
-document.getElementById("password").value;
+document.getElementById("password")
+.value;
+
 
 const button =
 document.getElementById("loginButton");
+
+
+if(!button){
+
+console.error("Login button not found.");
+
+showMessage(
+"loginMessage",
+"Sign-in button could not be found. Please refresh the page.",
+"error"
+);
+
+return;
+
+}
+
 
 button.disabled=true;
 
 button.textContent="Signing in...";
 
+
 try{
+
 
 const {data,error} =
 await supabaseClient.auth.signInWithPassword({
@@ -581,7 +1280,13 @@ password:password
 
 });
 
-if(error) throw error;
+
+if(error){
+
+throw error;
+
+}
+
 
 if(data.session){
 
@@ -589,17 +1294,30 @@ closeLogin();
 
 await loadDashboard();
 
-}
-
-}catch(error){
+}else{
 
 showMessage(
 "loginMessage",
-error.message || "Unable to sign in.",
+"Sign in was not completed. Please try again.",
 "error"
 );
 
-}finally{
+}
+
+}
+catch(error){
+
+console.error(error);
+
+showMessage(
+"loginMessage",
+error.message ||
+"Unable to sign in. Please check your email and password.",
+"error"
+);
+
+}
+finally{
 
 button.disabled=false;
 
@@ -611,12 +1329,13 @@ button.textContent="Sign In";
 
 
 /* =========================================================
-   LOAD DASHBOARD
-   ========================================================= */
+LOAD DASHBOARD
+========================================================= */
 
 async function loadDashboard(){
 
 try{
+
 
 const {
 data:{user},
@@ -624,7 +1343,13 @@ error:userError
 } =
 await supabaseClient.auth.getUser();
 
-if(userError) throw userError;
+
+if(userError){
+
+throw userError;
+
+}
+
 
 if(!user){
 
@@ -632,16 +1357,21 @@ return;
 
 }
 
+
 mainWebsite.style.display="none";
 
 dashboard.classList.add("show");
 
-document.getElementById("clientWelcome").textContent =
-user.email || "Authenticated client";
+
+document.getElementById(
+"clientWelcome"
+).textContent =
+user.email ||
+"Authenticated client";
 
 
 /*
-The profile_id used by your accounts table
+The profile_id used by the accounts table
 is expected to correspond to the authenticated
 Supabase user's ID.
 */
@@ -651,37 +1381,70 @@ data:accounts,
 error:accountError
 } =
 await supabaseClient
+
 .from("accounts")
-.select("id,account_type,account_number,currency,balance,status")
-.eq("profile_id",user.id)
-.order("created_at",{ascending:true});
 
-if(accountError) throw accountError;
+.select(
+"id,account_type,account_number,currency,balance,status"
+)
 
-displayAccounts(accounts || []);
+.eq(
+"profile_id",
+user.id
+)
+
+.order(
+"created_at",
+{
+ascending:true
+}
+);
+
+
+if(accountError){
+
+throw accountError;
+
+}
+
+
+displayAccounts(
+accounts || []
+);
+
 
 if(accounts && accounts.length){
 
 const accountIds =
-accounts.map(account => account.id);
+accounts.map(
+account => account.id
+);
 
 await loadTransactions(accountIds);
 
 }else{
 
-document.getElementById("transactionsList").innerHTML =
+document.getElementById(
+"transactionsList"
+).innerHTML =
 '<p style="color:#667085">No accounts are currently associated with this client.</p>';
 
 }
 
-}catch(error){
+
+}
+catch(error){
 
 console.error(error);
 
-document.getElementById("dashboardMessage").textContent =
+document.getElementById(
+"dashboardMessage"
+).textContent =
 "Unable to load the client account information.";
 
-document.getElementById("dashboardMessage").className =
+document.getElementById(
+"dashboardMessage"
+).className =
 "message error";
 
 }
@@ -690,60 +1453,101 @@ document.getElementById("dashboardMessage").className =
 
 
 /* =========================================================
-   DISPLAY ACCOUNTS
-   ========================================================= */
+DISPLAY ACCOUNTS
+========================================================= */
 
 function displayAccounts(accounts){
 
+
 const current =
-accounts.find(a =>
-a.account_type.toLowerCase()==="current"
+accounts.find(
+a =>
+String(a.account_type || "")
+.toLowerCase()==="current"
 );
+
 
 const savings =
-accounts.find(a =>
-a.account_type.toLowerCase()==="savings"
+accounts.find(
+a =>
+String(a.account_type || "")
+.toLowerCase()==="savings"
 );
 
+
 const investment =
-accounts.find(a =>
-a.account_type.toLowerCase()==="investment"
+accounts.find(
+a =>
+String(a.account_type || "")
+.toLowerCase()==="investment"
 );
 
 
 if(current){
 
-document.getElementById("currentBalance").textContent =
-formatMoney(current.balance,current.currency);
+document.getElementById(
+"currentBalance"
+).textContent =
+formatMoney(
+current.balance,
+current.currency
+);
 
-document.getElementById("currentAccountNumber").textContent =
+
+document.getElementById(
+"currentAccountNumber"
+).textContent =
 current.account_number
-? "Account: "+current.account_number
-: "";
+?
+"Account: "+current.account_number
+:
+"";
 
 }
+
 
 if(savings){
 
-document.getElementById("savingsBalance").textContent =
-formatMoney(savings.balance,savings.currency);
+document.getElementById(
+"savingsBalance"
+).textContent =
+formatMoney(
+savings.balance,
+savings.currency
+);
 
-document.getElementById("savingsAccountNumber").textContent =
+
+document.getElementById(
+"savingsAccountNumber"
+).textContent =
 savings.account_number
-? "Account: "+savings.account_number
-: "";
+?
+"Account: "+savings.account_number
+:
+"";
 
 }
 
+
 if(investment){
 
-document.getElementById("investmentBalance").textContent =
-formatMoney(investment.balance,investment.currency);
+document.getElementById(
+"investmentBalance"
+).textContent =
+formatMoney(
+investment.balance,
+investment.currency
+);
 
-document.getElementById("investmentAccountNumber").textContent =
+
+document.getElementById(
+"investmentAccountNumber"
+).textContent =
 investment.account_number
-? "Account: "+investment.account_number
-: "";
+?
+"Account: "+investment.account_number
+:
+"";
 
 }
 
@@ -751,29 +1555,46 @@ investment.account_number
 
 
 /* =========================================================
-   LOAD TRANSACTIONS
-   ========================================================= */
+LOAD TRANSACTIONS
+========================================================= */
 
 async function loadTransactions(accountIds){
+
 
 const {
 data:transactions,
 error
 } =
 await supabaseClient
+
 .from("transactions")
+
 .select(
 "id,account_id,transaction_reference,transaction_type,description,amount,balance_after,status,created_at"
 )
-.in("account_id",accountIds)
-.order("created_at",{ascending:false})
+
+.in(
+"account_id",
+accountIds
+)
+
+.order(
+"created_at",
+{
+ascending:false
+}
+)
+
 .limit(10);
+
 
 if(error){
 
 console.error(error);
 
-document.getElementById("transactionsList").innerHTML =
+document.getElementById(
+"transactionsList"
+).innerHTML =
 '<p style="color:#a33d3d">Unable to load transactions.</p>';
 
 return;
@@ -781,9 +1602,14 @@ return;
 }
 
 
-if(!transactions || !transactions.length){
+if(
+!transactions ||
+!transactions.length
+){
 
-document.getElementById("transactionsList").innerHTML =
+document.getElementById(
+"transactionsList"
+).innerHTML =
 '<p style="color:#667085">No recent transactions.</p>';
 
 return;
@@ -792,61 +1618,125 @@ return;
 
 
 const html =
-transactions.map(transaction => {
+transactions
+.map(
+transaction => {
+
 
 const amount =
 Number(transaction.amount);
 
+
 const positive =
 amount >= 0;
 
+
 return `
+
 <div class="transaction">
+
 <span>
-<strong>${escapeHtml(transaction.description)}</strong><br>
+
+<strong>
+${escapeHtml(transaction.description)}
+</strong>
+
+<br>
+
 <small style="color:#98a2b3">
-${escapeHtml(transaction.transaction_type || "")}
-· ${formatDate(transaction.created_at)}
+
+${escapeHtml(
+transaction.transaction_type || ""
+)}
+
+·
+
+${formatDate(
+transaction.created_at
+)}
+
 </small>
+
 </span>
-<span class="${positive ? "positive":"negative"}">
-${positive ? "+" : ""}${formatMoney(amount,"GBP")}
+
+
+<span class="${
+positive
+?
+"positive"
+:
+"negative"
+}">
+
+${
+positive
+?
+"+"
+:
+""
+}
+
+${formatMoney(
+amount,
+"GBP"
+)}
+
 </span>
+
 </div>
+
 `;
 
-}).join("");
+}
+)
+.join("");
 
 
-document.getElementById("transactionsList").innerHTML =
+document.getElementById(
+"transactionsList"
+).innerHTML =
 html;
 
 }
 
 
 /* =========================================================
-   SIGN OUT
-   ========================================================= */
+SIGN OUT
+========================================================= */
 
 async function signOut(){
 
+try{
+
 await supabaseClient.auth.signOut();
+
+}
+catch(error){
+
+console.error(error);
+
+}
+
 
 dashboard.classList.remove("show");
 
 mainWebsite.style.display="block";
 
-window.scrollTo(0,0);
+window.scrollTo(
+0,
+0
+);
 
 }
 
 
 /* =========================================================
-   SESSION CHECK
-   ========================================================= */
+SESSION CHECK
+========================================================= */
 
 supabaseClient.auth.onAuthStateChange(
 async (event,session)=>{
+
 
 if(session){
 
@@ -872,13 +1762,17 @@ mainWebsite.style.display="block";
 
 
 /* =========================================================
-   FORMAT MONEY
-   ========================================================= */
+FORMAT MONEY
+========================================================= */
 
-function formatMoney(value,currency){
+function formatMoney(
+value,
+currency
+){
 
 const amount =
 Number(value || 0);
+
 
 return new Intl.NumberFormat(
 "en-GB",
@@ -892,14 +1786,21 @@ currency:currency || "GBP"
 
 
 /* =========================================================
-   FORMAT DATE
-   ========================================================= */
+FORMAT DATE
+========================================================= */
 
 function formatDate(value){
 
-if(!value) return "";
+if(!value){
 
-return new Date(value).toLocaleDateString(
+return "";
+
+}
+
+
+return new Date(
+value
+).toLocaleDateString(
 "en-GB",
 {
 day:"2-digit",
@@ -912,30 +1813,54 @@ year:"numeric"
 
 
 /* =========================================================
-   BASIC HTML ESCAPING
-   ========================================================= */
+BASIC HTML ESCAPING
+========================================================= */
 
 function escapeHtml(value){
 
-return String(value ?? "")
-.replace(/&/g,"&amp;")
-.replace(/</g,"&lt;")
-.replace(/>/g,"&gt;")
-.replace(/"/g,"&quot;")
-.replace(/'/g,"&#039;");
+return String(
+value ?? ""
+)
+
+.replace(
+/&/g,
+"&amp;"
+)
+
+.replace(
+/</g,
+"&lt;"
+)
+
+.replace(
+/>/g,
+"&gt;"
+)
+
+.replace(
+/"/g,
+"&quot;"
+)
+
+.replace(
+/'/g,
+"&#039;"
+);
 
 }
 
 
 /* =========================================================
-   CLOSE MODAL WHEN CLICKING OUTSIDE
-   ========================================================= */
+CLOSE MODAL WHEN CLICKING OUTSIDE
+========================================================= */
 
 loginModal.addEventListener(
 "click",
 function(event){
 
-if(event.target===loginModal){
+if(
+event.target === loginModal
+){
 
 closeLogin();
 
@@ -946,15 +1871,20 @@ closeLogin();
 
 
 /* =========================================================
-   INITIAL SESSION CHECK
-   ========================================================= */
+INITIAL SESSION CHECK
+========================================================= */
 
 (async function(){
+
+
+try{
+
 
 const {
 data:{session}
 } =
 await supabaseClient.auth.getSession();
+
 
 if(session){
 
@@ -962,8 +1892,20 @@ await loadDashboard();
 
 }
 
+
+}
+catch(error){
+
+console.error(
+"Session check failed:",
+error
+);
+
+}
+
 })();
 
 </script>
+
 </body>
 </html>
