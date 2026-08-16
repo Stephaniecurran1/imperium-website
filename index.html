@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Imperium — modern financial services, investment solutions, international transfers, business services and financial planning.">
-<title>Imperium | Financial Services</title>
+
+<title>Imperium | Banking & Financial Services</title>
 
 <style>
 * {
@@ -19,28 +19,23 @@ scroll-behavior: smooth;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-background: #f7f9fc;
+background: #f6f8fb;
 color: #172033;
 line-height: 1.6;
 }
 
-a {
-color: inherit;
-}
-
 header {
-background: rgba(255,255,255,0.97);
-border-bottom: 1px solid #e8ebf0;
+background: #ffffff;
+border-bottom: 1px solid #e6eaf0;
 position: sticky;
 top: 0;
 z-index: 1000;
-backdrop-filter: blur(10px);
 }
 
 .nav {
 max-width: 1250px;
 margin: auto;
-padding: 17px 25px;
+padding: 18px 25px;
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -60,7 +55,7 @@ color: #b58a35;
 nav {
 display: flex;
 align-items: center;
-gap: 24px;
+gap: 22px;
 }
 
 nav a {
@@ -86,10 +81,12 @@ background: #132b52;
 color: white !important;
 }
 
+/* HERO */
+
 .hero {
 background: linear-gradient(135deg, #102747, #1d416d);
 color: white;
-padding: 105px 25px;
+padding: 95px 25px;
 }
 
 .hero-content {
@@ -103,15 +100,15 @@ align-items: center;
 
 .eyebrow {
 color: #d5ae60;
-text-transform: uppercase;
-letter-spacing: 2px;
 font-size: 13px;
-font-weight: 700;
+font-weight: 800;
+letter-spacing: 2px;
 margin-bottom: 18px;
+text-transform: uppercase;
 }
 
 .hero h1 {
-font-size: 56px;
+font-size: 55px;
 line-height: 1.08;
 margin-bottom: 25px;
 }
@@ -123,8 +120,8 @@ color: #d5ae60;
 .hero p {
 font-size: 18px;
 color: #dbe5f2;
-max-width: 680px;
-margin-bottom: 35px;
+max-width: 650px;
+margin-bottom: 32px;
 }
 
 .button {
@@ -132,15 +129,14 @@ display: inline-block;
 background: #c39a4a;
 color: white;
 text-decoration: none;
-padding: 14px 24px;
+padding: 14px 23px;
 border-radius: 6px;
 font-weight: 700;
-margin-right: 9px;
-border: 1px solid #c39a4a;
+margin-right: 8px;
 }
 
 .button:hover {
-background: #aa8138;
+background: #b58a35;
 }
 
 .button.secondary {
@@ -148,48 +144,45 @@ background: transparent;
 border: 1px solid white;
 }
 
-.button.secondary:hover {
-background: white;
-color: #132b52;
-}
-
 .hero-card {
 background: white;
 color: #172033;
-padding: 38px;
+padding: 35px;
 border-radius: 15px;
 box-shadow: 0 20px 50px rgba(0,0,0,0.22);
 }
 
 .hero-card h3 {
 color: #132b52;
-margin-bottom: 15px;
 font-size: 23px;
+margin-bottom: 12px;
 }
 
 .hero-card p {
 color: #667085;
 font-size: 15px;
-margin-bottom: 23px;
+margin-bottom: 20px;
 }
 
-.hero-points {
+.hero-list {
 list-style: none;
-margin-bottom: 25px;
+margin-bottom: 22px;
 }
 
-.hero-points li {
+.hero-list li {
 margin-bottom: 10px;
 color: #475467;
 font-size: 14px;
 }
 
-.hero-points li::before {
+.hero-list li::before {
 content: "✓";
 color: #b58a35;
 font-weight: bold;
 margin-right: 9px;
 }
+
+/* SECTIONS */
 
 .section {
 max-width: 1250px;
@@ -210,18 +203,11 @@ margin-bottom: 12px;
 
 .section-title p {
 color: #667085;
-max-width: 720px;
+max-width: 700px;
 margin: auto;
 }
 
-.section-label {
-color: #b58a35;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-font-size: 12px;
-font-weight: 700;
-margin-bottom: 10px;
-}
+/* CARDS */
 
 .cards {
 display: grid;
@@ -231,9 +217,9 @@ gap: 25px;
 
 .card {
 background: white;
-padding: 32px;
+padding: 30px;
 border-radius: 13px;
-border: 1px solid #e8ebf0;
+border: 1px solid #e7ebf0;
 transition: 0.3s;
 }
 
@@ -257,7 +243,7 @@ margin-bottom: 20px;
 
 .card h3 {
 color: #132b52;
-margin-bottom: 12px;
+margin-bottom: 10px;
 font-size: 20px;
 }
 
@@ -266,81 +252,77 @@ color: #667085;
 font-size: 15px;
 }
 
-.card-link {
+.card a {
 display: inline-block;
-margin-top: 20px;
+margin-top: 18px;
 color: #132b52;
-font-size: 14px;
-font-weight: 700;
 text-decoration: none;
-}
-
-.card-link:hover {
-color: #b58a35;
-}
-
-.highlight {
-background: #eef3f9;
-}
-
-.two-column {
-max-width: 1100px;
-margin: auto;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 55px;
-align-items: center;
-}
-
-.two-column h2 {
-color: #132b52;
-font-size: 36px;
-margin-bottom: 18px;
-}
-
-.two-column p {
-color: #667085;
-margin-bottom: 18px;
-}
-
-.feature-list {
-list-style: none;
-margin-top: 25px;
-}
-
-.feature-list li {
-background: white;
-padding: 13px 15px;
-border-radius: 7px;
-margin-bottom: 10px;
-border: 1px solid #e8ebf0;
-color: #344054;
+font-weight: 700;
 font-size: 14px;
 }
 
-.feature-list li::before {
-content: "✓";
-color: #b58a35;
-font-weight: bold;
-margin-right: 10px;
+/* FEATURE STRIP */
+
+.features {
+background: #ffffff;
+border-top: 1px solid #e7ebf0;
+border-bottom: 1px solid #e7ebf0;
 }
 
-.feature-box {
-background: #132b52;
+.feature-grid {
+max-width: 1250px;
+margin: auto;
+padding: 35px 25px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+
+.feature {
+text-align: center;
+}
+
+.feature strong {
+display: block;
+color: #132b52;
+margin-bottom: 5px;
+}
+
+.feature span {
+color: #667085;
+font-size: 13px;
+}
+
+/* DARK SECTION */
+
+.dark-section {
+background: #102747;
 color: white;
-border-radius: 16px;
-padding: 40px;
-box-shadow: 0 20px 45px rgba(16,39,71,0.18);
 }
 
-.feature-box h3 {
-font-size: 26px;
-margin-bottom: 15px;
+.dark-section .section-title h2 {
+color: white;
 }
 
-.feature-box p {
+.dark-section .section-title p {
 color: #dbe5f2;
 }
+
+.dark-card {
+background: #18365c;
+border: 1px solid rgba(255,255,255,0.10);
+color: white;
+}
+
+.dark-card h3 {
+color: white;
+}
+
+.dark-card p {
+color: #c9d5e5;
+}
+
+/* ABOUT */
 
 .about {
 background: white;
@@ -363,180 +345,74 @@ color: #667085;
 margin-bottom: 15px;
 }
 
-.trust-grid {
-max-width: 1000px;
-margin: 45px auto 0;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
+/* SECURITY */
 
-.trust-item {
+.security-box {
+background: #ffffff;
+border: 1px solid #e4e9f0;
+border-radius: 14px;
+padding: 35px;
 text-align: center;
-padding: 25px;
-border: 1px solid #e8ebf0;
-border-radius: 10px;
-background: #f9fafb;
+max-width: 900px;
+margin: auto;
 }
 
-.trust-item strong {
-display: block;
+.security-box h3 {
 color: #132b52;
-margin-bottom: 7px;
-}
-
-.trust-item span {
-color: #667085;
-font-size: 14px;
-}
-
-.client-access {
-background: linear-gradient(135deg, #102747, #1d416d);
-color: white;
-}
-
-.client-box {
-max-width: 950px;
-margin: auto;
-text-align: center;
-}
-
-.client-box h2 {
-font-size: 38px;
-margin-bottom: 15px;
-}
-
-.client-box p {
-color: #dbe5f2;
-max-width: 700px;
-margin: 0 auto 28px;
-}
-
-.notice {
-background: rgba(255,255,255,0.10);
-border: 1px solid rgba(255,255,255,0.18);
-border-radius: 10px;
-padding: 18px;
-max-width: 750px;
-margin: 25px auto;
-color: #e8eef7;
-font-size: 14px;
-}
-
-.faq {
-max-width: 850px;
-margin: auto;
-}
-
-details {
-background: white;
-border: 1px solid #e8ebf0;
-border-radius: 9px;
 margin-bottom: 12px;
-padding: 18px 20px;
 }
 
-summary {
-cursor: pointer;
-color: #132b52;
-font-weight: 700;
-}
-
-details p {
-margin-top: 13px;
+.security-box p {
 color: #667085;
-font-size: 14px;
 }
+
+/* CONTACT */
 
 .contact {
-background: #f0f3f7;
+background: #102747;
+color: white;
 text-align: center;
 padding: 85px 25px;
 }
 
 .contact h2 {
-color: #132b52;
-font-size: 37px;
+font-size: 38px;
 margin-bottom: 15px;
 }
 
 .contact p {
-color: #667085;
-max-width: 650px;
-margin: 0 auto 28px;
+color: #dbe5f2;
+margin-bottom: 30px;
 }
 
-.contact-card {
-max-width: 900px;
-margin: 35px auto 0;
-background: white;
-border: 1px solid #e8ebf0;
-border-radius: 12px;
-padding: 30px;
-text-align: left;
-}
-
-.contact-card h3 {
-color: #132b52;
-margin-bottom: 10px;
-}
-
-.contact-card p {
-margin: 0;
-}
-
-.legal {
-background: white;
-border-top: 1px solid #e8ebf0;
-}
-
-.legal-content {
-max-width: 1100px;
-margin: auto;
-padding: 45px 25px;
-color: #667085;
-font-size: 13px;
-}
-
-.legal-content h3 {
-color: #132b52;
-margin-bottom: 10px;
-}
-
-.legal-content p {
-margin-bottom: 12px;
-}
+/* FOOTER */
 
 footer {
 background: #0b1b31;
 color: #aeb9c8;
-padding: 40px 25px;
+padding: 45px 25px 25px;
 font-size: 14px;
 }
 
 .footer-grid {
-max-width: 1200px;
+max-width: 1250px;
 margin: auto;
 display: grid;
 grid-template-columns: 2fr 1fr 1fr 1fr;
-gap: 35px;
+gap: 40px;
+margin-bottom: 35px;
 }
 
-footer h3,
-footer h4 {
+footer h3 {
 color: white;
-margin-bottom: 13px;
-}
-
-footer p {
-margin-bottom: 10px;
+margin-bottom: 14px;
 }
 
 footer a {
 display: block;
-text-decoration: none;
-margin-bottom: 9px;
 color: #aeb9c8;
+text-decoration: none;
+margin-bottom: 8px;
 }
 
 footer a:hover {
@@ -544,20 +420,30 @@ color: white;
 }
 
 .copyright {
-max-width: 1200px;
-margin: 30px auto 0;
+max-width: 1250px;
+margin: auto;
 padding-top: 20px;
-border-top: 1px solid rgba(255,255,255,0.1);
+border-top: 1px solid rgba(255,255,255,0.10);
 text-align: center;
 }
 
-@media (max-width: 950px) {
-.hero-content,
-.two-column {
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+.hero-content {
 grid-template-columns: 1fr;
 }
 
+.hero h1 {
+font-size: 43px;
+}
+
 .cards {
+grid-template-columns: 1fr 1fr;
+}
+
+.feature-grid {
 grid-template-columns: 1fr 1fr;
 }
 
@@ -566,7 +452,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 nav {
-gap: 12px;
+gap: 10px;
 }
 
 nav a {
@@ -574,9 +460,10 @@ font-size: 12px;
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
+
 .nav {
-padding: 14px 16px;
+padding: 15px;
 }
 
 .logo {
@@ -588,38 +475,27 @@ display: none;
 }
 
 .hero {
-padding: 75px 20px;
-}
-
-.hero h1 {
-font-size: 40px;
-}
-
-.hero p {
-font-size: 16px;
-}
-
-.section {
 padding: 65px 20px;
 }
 
-.section-title h2,
-.about-content h2,
-.contact h2,
-.client-box h2 {
-font-size: 30px;
+.hero h1 {
+font-size: 38px;
 }
 
 .cards {
 grid-template-columns: 1fr;
 }
 
-.trust-grid {
+.feature-grid {
 grid-template-columns: 1fr;
 }
 
 .footer-grid {
 grid-template-columns: 1fr;
+}
+
+.button {
+margin-bottom: 10px;
 }
 }
 </style>
@@ -627,9 +503,14 @@ grid-template-columns: 1fr;
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 <div class="nav">
-<div class="logo">IMPERIUM<span>.</span></div>
+
+<div class="logo">
+IMPERIUM<span>.</span>
+</div>
 
 <nav>
 <a href="#home">Home</a>
@@ -639,8 +520,9 @@ grid-template-columns: 1fr;
 <a href="#international">International</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-<a href="#client-access" class="login">Client Access</a>
+<a href="#client" class="login">Client Access</a>
 </nav>
+
 </div>
 </header>
 
@@ -648,10 +530,14 @@ grid-template-columns: 1fr;
 <!-- HERO -->
 
 <section class="hero" id="home">
+
 <div class="hero-content">
 
 <div>
-<div class="eyebrow">Modern financial services</div>
+
+<div class="eyebrow">
+Modern Financial Services
+</div>
 
 <h1>
 Financial solutions built around
@@ -659,293 +545,452 @@ Financial solutions built around
 </h1>
 
 <p>
-Imperium provides a modern approach to financial services,
-combining thoughtful solutions, professional guidance and
-a commitment to helping clients pursue their financial goals.
+Imperium provides a modern financial-services experience
+designed around individuals, businesses, investments and
+long-term financial planning.
 </p>
 
-<a href="#services" class="button">Explore Services</a>
-<a href="#contact" class="button secondary">Contact Us</a>
+<a href="#personal" class="button">
+Explore Services
+</a>
+
+<a href="#contact" class="button secondary">
+Contact Us
+</a>
+
 </div>
 
+
 <div class="hero-card">
-<h3>Welcome to Imperium</h3>
+
+<h3>
+Welcome to Imperium
+</h3>
 
 <p>
-Explore financial solutions designed around individuals,
-businesses and long-term financial planning.
+Discover financial solutions designed to give clients
+clarity, convenience and confidence.
 </p>
 
-<ul class="hero-points">
-<li>Personal financial solutions</li>
+<ul class="hero-list">
+<li>Current account services</li>
 <li>Investment account solutions</li>
 <li>International transfer services</li>
 <li>Business financial services</li>
+<li>Digital banking access</li>
 </ul>
 
-<a href="#services" class="button">Explore Services</a>
+<a href="#services" class="button">
+Explore Services
+</a>
+
 </div>
 
 </div>
+
 </section>
 
 
-<!-- SERVICES -->
+<!-- FEATURES -->
 
-<section class="section" id="services">
+<section class="features">
+
+<div class="feature-grid">
+
+<div class="feature">
+<strong>Personal Banking</strong>
+<span>Accounts and everyday financial services</span>
+</div>
+
+<div class="feature">
+<strong>Business Banking</strong>
+<span>Solutions for businesses and organizations</span>
+</div>
+
+<div class="feature">
+<strong>Investment Accounts</strong>
+<span>Investment-focused financial solutions</span>
+</div>
+
+<div class="feature">
+<strong>International Transfers</strong>
+<span>Cross-border payment solutions</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PERSONAL BANKING -->
+
+<section class="section" id="personal">
 
 <div class="section-title">
-<div class="section-label">What we provide</div>
 
-<h2>Our Financial Services</h2>
+<h2>Personal Banking</h2>
 
 <p>
-Explore the financial solutions available through Imperium.
-Services are subject to eligibility, applicable terms and actual availability.
+Flexible financial services designed to help individuals
+manage their money and plan for the future.
 </p>
+
 </div>
+
 
 <div class="cards">
 
-<div class="card" id="personal">
-<div class="icon">◈</div>
-<h3>Personal Financial Services</h3>
-<p>
-Financial solutions designed to help individuals organise,
-manage and plan for their financial goals.
-</p>
-<a href="#contact" class="card-link">Learn more →</a>
-</div>
-
-<div class="card" id="investments">
-<div class="icon">◆</div>
-<h3>Investment Accounts</h3>
-<p>
-Explore investment account solutions designed for clients
-seeking to manage and grow assets according to their objectives
-and risk considerations.
-</p>
-<a href="#contact" class="card-link">Explore investments →</a>
-</div>
-
-<div class="card" id="international">
-<div class="icon">◎</div>
-<h3>International Transfers</h3>
-<p>
-International transfer solutions designed to help clients
-move funds across supported countries and currencies,
-subject to applicable requirements.
-</p>
-<a href="#contact" class="card-link">Learn about transfers →</a>
-</div>
-
-<div class="card" id="business">
-<div class="icon">◇</div>
-<h3>Business Services</h3>
-<p>
-Financial solutions designed to support businesses with
-planning, payments, cash-flow management and long-term objectives.
-</p>
-<a href="#contact" class="card-link">Business services →</a>
-</div>
-
 <div class="card">
+
 <div class="icon">▣</div>
-<h3>Wealth Management</h3>
+
+<h3>
+Current Account
+</h3>
+
 <p>
-Structured financial planning and wealth-management solutions
-for clients with broader long-term financial objectives.
+A flexible current account designed for everyday banking,
+payments, transfers and convenient access to your funds.
 </p>
-<a href="#contact" class="card-link">Discover more →</a>
+
+<a href="#contact">
+Learn More →
+</a>
+
 </div>
+
 
 <div class="card">
+
+<div class="icon">◆</div>
+
+<h3>
+Savings Account
+</h3>
+
+<p>
+Organise your savings and work toward your financial
+goals with structured savings solutions.
+</p>
+
+<a href="#contact">
+Learn More →
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">◇</div>
+
+<h3>
+Personal Loans
+</h3>
+
+<p>
+Financing solutions designed around personal needs,
+planned purchases and financial objectives.
+</p>
+
+<a href="#contact">
+Learn More →
+</a>
+
+</div>
+
+
+<div class="card">
+
 <div class="icon">▤</div>
-<h3>Financing Solutions</h3>
-<p>
-Financing solutions may be available for eligible clients
-depending on the product, application and applicable terms.
-</p>
-<a href="#contact" class="card-link">Enquire now →</a>
-</div>
 
-</div>
-</section>
-
-
-<!-- PERSONAL -->
-
-<section class="highlight">
-<div class="section">
-<div class="two-column">
-
-<div>
-<div class="section-label">Personal</div>
-
-<h2>Financial solutions for your goals</h2>
+<h3>
+Cards & Payments
+</h3>
 
 <p>
-Whether you are planning for the future, managing everyday
-finances or considering investment opportunities, Imperium
-provides a range of financial-service solutions designed
-around individual objectives.
+Convenient payment solutions designed to make everyday
+transactions easier and more accessible.
 </p>
 
-<ul class="feature-list">
-<li>Personal financial planning</li>
-<li>Savings solutions</li>
-<li>Investment account solutions</li>
-<li>International transfers</li>
-<li>Long-term financial planning</li>
-</ul>
+<a href="#contact">
+Learn More →
+</a>
+
 </div>
 
-<div class="feature-box">
-<h3>Plan with confidence.</h3>
+
+<div class="card">
+
+<div class="icon">◈</div>
+
+<h3>
+Online Banking
+</h3>
 
 <p>
-Good financial decisions begin with clarity. Our approach
-focuses on understanding objectives, explaining available
-options and helping clients make informed decisions.
+Convenient digital access to account information,
+payments and selected financial services.
 </p>
 
-<br>
+<a href="#client">
+Client Access →
+</a>
 
-<a href="#contact" class="button">Speak With Us</a>
+</div>
+
+
+<div class="card">
+
+<div class="icon">✦</div>
+
+<h3>
+Financial Planning
+</h3>
+
+<p>
+Professional financial planning designed to help clients
+understand their options and prepare for the future.
+</p>
+
+<a href="#contact">
+Learn More →
+</a>
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
 <!-- BUSINESS -->
 
-<section class="section">
-<div class="two-column">
+<section class="dark-section" id="business">
 
-<div class="feature-box">
-<h3>Supporting business growth.</h3>
+<div class="section">
 
-<p>
-Businesses require financial solutions that can adapt to
-changing needs. Explore services designed around business
-planning, payments and financial management.
-</p>
+<div class="section-title">
 
-<br>
-
-<a href="#contact" class="button">Business Enquiry</a>
-</div>
-
-<div>
-<div class="section-label">Business</div>
-
-<h2>Financial services for businesses</h2>
+<h2>Business Banking</h2>
 
 <p>
-Imperium can provide business-focused financial solutions
-designed around operational and long-term objectives.
+Financial solutions designed to support businesses,
+entrepreneurs and growing organizations.
 </p>
 
-<ul class="feature-list">
-<li>Business financial services</li>
-<li>Business payment solutions</li>
-<li>Cash-flow planning</li>
-<li>International business transfers</li>
-<li>Business financing enquiries</li>
-</ul>
+</div>
+
+
+<div class="cards">
+
+<div class="card dark-card">
+
+<div class="icon">◆</div>
+
+<h3>
+Business Accounts
+</h3>
+
+<p>
+Account solutions designed for business operations,
+payments and financial management.
+</p>
+
+</div>
+
+
+<div class="card dark-card">
+
+<div class="icon">▣</div>
+
+<h3>
+Business Payments
+</h3>
+
+<p>
+Payment and transfer solutions for businesses managing
+customers, suppliers and operating expenses.
+</p>
+
+</div>
+
+
+<div class="card dark-card">
+
+<div class="icon">◈</div>
+
+<h3>
+Business Financing
+</h3>
+
+<p>
+Financial solutions designed to support business
+objectives and responsible growth.
+</p>
+
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
 <!-- INVESTMENTS -->
 
-<section class="highlight">
-<div class="section">
+<section class="section" id="investments">
 
 <div class="section-title">
-<div class="section-label">Investments</div>
 
 <h2>Investment Accounts</h2>
 
 <p>
-Investment solutions designed around individual objectives,
-time horizons and risk considerations.
+Explore investment-focused financial solutions designed
+around long-term financial objectives.
 </p>
+
 </div>
+
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">📊</div>
-<h3>Investment Planning</h3>
+
+<div class="icon">▲</div>
+
+<h3>
+Investment Accounts
+</h3>
+
 <p>
-Understand investment objectives, time horizons and
-considerations before making investment decisions.
+Access investment account solutions designed for clients
+interested in building and managing long-term assets.
 </p>
+
+<a href="#contact">
+Explore Investments →
+</a>
+
 </div>
 
-<div class="card">
-<div class="icon">◉</div>
-<h3>Portfolio Solutions</h3>
-<p>
-Explore portfolio-oriented solutions appropriate to
-eligible clients and applicable investment terms.
-</p>
-</div>
 
 <div class="card">
+
 <div class="icon">◆</div>
-<h3>Long-Term Wealth</h3>
+
+<h3>
+Wealth Planning
+</h3>
+
 <p>
-Build a structured approach to long-term financial
-planning and wealth objectives.
+Structured financial planning focused on long-term wealth
+objectives and responsible financial decisions.
 </p>
+
+<a href="#contact">
+Learn More →
+</a>
+
 </div>
+
+
+<div class="card">
+
+<div class="icon">✦</div>
+
+<h3>
+Portfolio Guidance
+</h3>
+
+<p>
+Professional guidance to help clients understand
+investment choices and financial strategies.
+</p>
+
+<a href="#contact">
+Learn More →
+</a>
 
 </div>
 
 </div>
+
 </section>
 
 
 <!-- INTERNATIONAL -->
 
-<section class="section">
-<div class="two-column">
+<section class="dark-section" id="international">
 
-<div>
-<div class="section-label">Global payments</div>
+<div class="section">
+
+<div class="section-title">
 
 <h2>International Transfers</h2>
 
 <p>
-International transfer services can help eligible clients
-move funds between supported destinations and currencies.
+Financial transfer solutions designed for clients
+sending and receiving funds internationally.
 </p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card dark-card">
+
+<div class="icon">⇄</div>
+
+<h3>
+International Transfers
+</h3>
 
 <p>
-Transfer availability, supported currencies, fees, limits,
-processing times and verification requirements may vary.
+Send and receive funds across supported international
+destinations through available transfer services.
 </p>
 
-<a href="#contact" class="button">Enquire About Transfers</a>
 </div>
 
-<div class="feature-box">
-<h3>International financial connections</h3>
+
+<div class="card dark-card">
+
+<div class="icon">◎</div>
+
+<h3>
+Currency Services
+</h3>
 
 <p>
-We aim to make international financial activity clearer and
-easier to understand while maintaining appropriate
-verification and compliance requirements.
+Access information and services relating to supported
+currencies and international transactions.
 </p>
+
+</div>
+
+
+<div class="card dark-card">
+
+<div class="icon">◇</div>
+
+<h3>
+Cross-Border Payments
+</h3>
+
+<p>
+Payment solutions designed for individuals and
+businesses with international financial needs.
+</p>
+
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
@@ -957,76 +1002,31 @@ verification and compliance requirements.
 
 <div class="about-content">
 
-<div class="section-label">About Imperium</div>
-
-<h2>A modern financial-services experience</h2>
+<h2>
+About Imperium
+</h2>
 
 <p>
-Imperium is focused on delivering a professional and
-client-focused financial-services experience.
+Imperium is focused on delivering a modern,
+professional financial-services experience.
 </p>
 
 <p>
-Our approach is built around clarity, professionalism,
-responsible financial decision-making and long-term client
-relationships.
+Our approach is built around transparency,
+professionalism and helping clients make informed
+financial decisions.
 </p>
-
-</div>
-
-<div class="trust-grid">
-
-<div class="trust-item">
-<strong>Professional</strong>
-<span>Clear and thoughtful financial-service experiences.</span>
-</div>
-
-<div class="trust-item">
-<strong>Transparent</strong>
-<span>Clear information about services, terms and requirements.</span>
-</div>
-
-<div class="trust-item">
-<strong>Client-focused</strong>
-<span>Solutions designed around individual financial objectives.</span>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- CLIENT ACCESS -->
-
-<section class="client-access" id="client-access">
-
-<div class="section">
-
-<div class="client-box">
-
-<div class="eyebrow">Digital services</div>
-
-<h2>Client Access</h2>
 
 <p>
-Access to client services can provide a convenient way to
-manage documents, communicate with your financial-services
-provider and access supported digital services.
+We aim to provide convenient financial solutions
+across personal banking, business services,
+investments and international financial services.
 </p>
 
-<div class="notice">
-Secure client-account functionality should only be provided
-through a properly secured authentication system. Do not
-submit passwords, card numbers or sensitive financial
-information through this public website.
-</div>
-
-<a href="#contact" class="button">Client Support</a>
-
 </div>
 
 </div>
+
 </section>
 
 
@@ -1036,163 +1036,71 @@ information through this public website.
 
 <div class="section-title">
 
-<div class="section-label">Security</div>
-
-<h2>Security Centre</h2>
+<h2>
+Security & Privacy
+</h2>
 
 <p>
-Protecting personal and financial information requires
-awareness, secure systems and responsible online behaviour.
+Protecting client information and maintaining secure
+financial services is an important part of our approach.
 </p>
 
 </div>
 
-<div class="cards">
 
-<div class="card">
-<div class="icon">🔒</div>
-<h3>Protect Your Credentials</h3>
+<div class="security-box">
+
+<h3>
+Your information matters
+</h3>
+
 <p>
-Never share passwords, verification codes or security
-credentials with another person.
+Imperium is committed to responsible handling of client
+information and maintaining appropriate security practices.
+Additional security, privacy and regulatory information
+should be provided here as applicable to the actual services
+and legal status of the institution.
 </p>
-</div>
-
-<div class="card">
-<div class="icon">⚠</div>
-<h3>Fraud Awareness</h3>
-<p>
-Be cautious of unexpected messages requesting payments,
-passwords or sensitive financial information.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">✓</div>
-<h3>Verify Requests</h3>
-<p>
-If you receive a suspicious financial request, verify it
-through an official Imperium communication channel.
-</p>
-</div>
 
 </div>
+
 </section>
 
 
-<!-- RESOURCES -->
+<!-- CLIENT ACCESS -->
 
-<section class="highlight">
+<section class="dark-section" id="client">
 
 <div class="section">
 
 <div class="section-title">
 
-<div class="section-label">Resources</div>
-
-<h2>Financial Resources</h2>
+<h2>
+Client Access
+</h2>
 
 <p>
-Useful information to help clients better understand
-financial planning and decision-making.
+Access your financial services through the Imperium
+client platform.
 </p>
 
 </div>
 
-<div class="cards">
 
-<div class="card">
-<div class="icon">▤</div>
-<h3>Financial Education</h3>
-<p>
-Learn about financial planning, savings, investments
-and responsible money management.
-</p>
-</div>
+<div style="text-align:center;">
 
-<div class="card">
-<div class="icon">?</div>
-<h3>Frequently Asked Questions</h3>
-<p>
-Find answers to common questions about services,
-applications and client support.
-</p>
-</div>
+<a href="#contact" class="button">
+Client Login
+</a>
 
-<div class="card">
-<div class="icon">◫</div>
-<h3>Financial Insights</h3>
-<p>
-Future articles and educational resources can provide
-general financial information and insights.
-</p>
-</div>
+<a href="#contact" class="button secondary">
+Contact Support
+</a>
 
 </div>
 
 </div>
-</section>
 
-
-<!-- FAQ -->
-
-<section class="section">
-
-<div class="section-title">
-
-<div class="section-label">Help centre</div>
-
-<h2>Frequently Asked Questions</h2>
-
-</div>
-
-<div class="faq">
-
-<details>
-<summary>How can I learn more about Imperium services?</summary>
-<p>
-Contact Imperium through the official contact channel provided
-on this website. Service availability and eligibility may vary.
-</p>
-</details>
-
-<details>
-<summary>Does Imperium offer investment accounts?</summary>
-<p>
-Investment account solutions may be available to eligible
-clients. Contact Imperium for current product availability,
-eligibility requirements, fees and applicable terms.
-</p>
-</details>
-
-<details>
-<summary>Can I make international transfers?</summary>
-<p>
-International transfer services may be available for
-supported destinations and currencies. Requirements, fees,
-limits and processing times may apply.
-</p>
-</details>
-
-<details>
-<summary>How do I contact client support?</summary>
-<p>
-Use the contact section of this website to reach the
-appropriate Imperium support channel.
-</p>
-</details>
-
-<details>
-<summary>Is the information on this website financial advice?</summary>
-<p>
-General information provided on this website is not intended
-to constitute personalised financial, investment, legal or
-tax advice. Clients should consider their individual
-circumstances and obtain appropriate professional advice.
-</p>
-</details>
-
-</div>
 </section>
 
 
@@ -1200,66 +1108,17 @@ circumstances and obtain appropriate professional advice.
 
 <section class="contact" id="contact">
 
-<h2>Let's Talk</h2>
+<h2>
+Let's Talk
+</h2>
 
 <p>
-Have a question about our services or want to discuss your
-financial needs? Contact Imperium through your official
-support channel.
+Have a question about our services? Get in touch with Imperium.
 </p>
 
-<a href="#contact-details" class="button">Contact Imperium</a>
-
-<div class="contact-card" id="contact-details">
-
-<h3>Client Support</h3>
-
-<p>
-Add your official Imperium business email, telephone number,
-office address and business hours here before publishing
-customer-facing contact information.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- LEGAL -->
-
-<section class="legal">
-
-<div class="legal-content">
-
-<h3>Important Information</h3>
-
-<p>
-Services described on this website are subject to eligibility,
-availability, applicable terms, verification requirements and
-any fees or restrictions that may apply.
-</p>
-
-<p>
-Investment products and financial services can involve risk.
-Information presented on this website is general information
-and should not be treated as personalised financial,
-investment, legal or tax advice.
-</p>
-
-<p>
-Before publishing this website for customers, add Imperium's
-actual Privacy Policy, Terms & Conditions, complaints process,
-regulatory disclosures and any legally required notices.
-</p>
-
-<p>
-Do not use this website to submit passwords, payment-card
-details, account credentials or other highly sensitive
-financial information unless and until an appropriately
-secured backend and authentication system has been implemented.
-</p>
-
-</div>
+<a href="mailto:contact@imperium.example" class="button">
+Contact Imperium
+</a>
 
 </section>
 
@@ -1271,42 +1130,68 @@ secured backend and authentication system has been implemented.
 <div class="footer-grid">
 
 <div>
-<h3>IMPERIUM<span style="color:#b58a35;">.</span></h3>
+
+<h3>
+IMPERIUM.
+</h3>
 
 <p>
 Modern financial services designed around clarity,
-professionalism and long-term financial goals.
+convenience and long-term financial goals.
 </p>
+
 </div>
 
+
 <div>
-<h4>Services</h4>
-<a href="#personal">Personal</a>
-<a href="#business">Business</a>
-<a href="#investments">Investments</a>
+
+<h3>
+Personal
+</h3>
+
+<a href="#personal">Current Account</a>
+<a href="#personal">Savings</a>
+<a href="#personal">Personal Loans</a>
+<a href="#personal">Cards & Payments</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Services
+</h3>
+
+<a href="#business">Business Banking</a>
+<a href="#investments">Investment Accounts</a>
 <a href="#international">International Transfers</a>
+<a href="#personal">Financial Planning</a>
+
 </div>
 
+
 <div>
-<h4>Company</h4>
+
+<h3>
+Support
+</h3>
+
+<a href="#client">Client Access</a>
+<a href="#contact">Contact Us</a>
 <a href="#about">About Imperium</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-<a href="#client-access">Client Access</a>
-</div>
 
-<div>
-<h4>Support</h4>
-<a href="#client-access">Client Access</a>
-<a href="#contact">Contact Support</a>
-<a href="#contact">Help Centre</a>
-<a href="#about">Security</a>
 </div>
 
 </div>
+
 
 <div class="copyright">
-© 2026 <strong>Imperium</strong>. All rights reserved.
+
+<p>
+© 2017 <strong>Imperium</strong>. All rights reserved.
+</p>
+
 </div>
 
 </footer>
