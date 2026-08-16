@@ -6,11 +6,6 @@
 
 <title>Imperium | Banking & Financial Services</title>
 
-<meta
-name="description"
-content="Imperium provides modern personal banking, business banking, investment and international financial services."
->
-
 <style>
 * {
 margin: 0;
@@ -24,7 +19,7 @@ scroll-behavior: smooth;
 
 body {
 font-family: Arial, Helvetica, sans-serif;
-background: #f6f8fc;
+background: #f5f7fb;
 color: #172033;
 line-height: 1.6;
 }
@@ -34,13 +29,14 @@ text-decoration: none;
 }
 
 button,
-input {
+input,
+select {
 font-family: inherit;
 }
 
 /* =========================
 HEADER
-========================= */
+========================== */
 
 header {
 background: #ffffff;
@@ -57,14 +53,14 @@ padding: 17px 25px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-gap: 20px;
+gap: 25px;
 }
 
 .logo {
 font-size: 28px;
 font-weight: 800;
 letter-spacing: 1.5px;
-color: #132b52;
+color: #102747;
 white-space: nowrap;
 }
 
@@ -75,327 +71,306 @@ color: #c39a4a;
 nav {
 display: flex;
 align-items: center;
-flex-wrap: wrap;
-justify-content: flex-end;
-gap: 24px;
+gap: 25px;
 }
 
 nav a {
 color: #344054;
 font-size: 14px;
 font-weight: 600;
-transition: 0.2s;
 }
 
 nav a:hover {
-color: #b58a35;
+color: #b18434;
 }
 
-.login-nav {
-border: 1px solid #132b52;
+.client-btn {
+background: #102747;
+color: white !important;
 padding: 10px 17px;
 border-radius: 6px;
-color: #132b52;
 }
 
-.login-nav:hover {
-background: #132b52;
-color: #ffffff;
+.client-btn:hover {
+background: #193c68;
 }
 
 /* =========================
 HERO
-========================= */
+========================== */
 
 .hero {
-background: linear-gradient(135deg, #102747, #203f78, #183d80);
+background: linear-gradient(135deg, #0d2342, #173f70, #204e8b);
 color: white;
-padding: 90px 25px;
+padding: 95px 25px;
 }
 
 .hero-content {
 max-width: 1250px;
 margin: auto;
 display: grid;
-grid-template-columns: 1.15fr 0.85fr;
-gap: 65px;
+grid-template-columns: 1.15fr .85fr;
+gap: 60px;
 align-items: center;
 }
 
 .eyebrow {
-color: #d5ae60;
+color: #d8b15d;
 font-size: 13px;
 font-weight: 800;
-letter-spacing: 1.5px;
+letter-spacing: 2px;
 margin-bottom: 15px;
-text-transform: uppercase;
 }
 
 .hero h1 {
-font-size: 56px;
+font-size: 54px;
 line-height: 1.08;
 margin-bottom: 25px;
 }
 
 .hero h1 span {
-color: #d5ae60;
+color: #d8b15d;
 }
 
-.hero-text {
+.hero p {
+color: #dbe6f4;
 font-size: 18px;
-color: #dce6f3;
-max-width: 680px;
-margin-bottom: 32px;
+max-width: 670px;
+margin-bottom: 30px;
 }
 
 .button {
 display: inline-block;
 background: #c39a4a;
-color: #ffffff;
-padding: 14px 24px;
+color: white;
+padding: 14px 23px;
 border-radius: 6px;
 font-weight: 700;
 border: none;
 cursor: pointer;
-transition: 0.2s;
+margin-right: 8px;
 }
 
 .button:hover {
-background: #b58a35;
-transform: translateY(-1px);
+background: #ae8439;
 }
 
 .button.secondary {
 background: transparent;
-border: 1px solid #ffffff;
-margin-left: 8px;
+border: 1px solid white;
 }
 
 .button.secondary:hover {
-background: #ffffff;
-color: #132b52;
+background: white;
+color: #102747;
 }
 
 .hero-card {
-background: #ffffff;
+background: white;
 color: #172033;
-padding: 34px;
+padding: 35px;
 border-radius: 15px;
-box-shadow: 0 25px 55px rgba(0,0,0,0.22);
+box-shadow: 0 25px 60px rgba(0,0,0,.25);
 }
 
-.hero-card h3 {
-color: #132b52;
-font-size: 23px;
+.hero-card h2 {
+color: #102747;
 margin-bottom: 12px;
 }
 
-.hero-card > p {
+.hero-card p {
 color: #667085;
 font-size: 15px;
-margin-bottom: 20px;
+margin-bottom: 18px;
 }
 
 .hero-list {
 list-style: none;
-margin-bottom: 25px;
+margin-bottom: 22px;
 }
 
 .hero-list li {
-margin-bottom: 10px;
+margin: 10px 0;
 color: #475467;
 font-size: 14px;
 }
 
 .hero-list li::before {
 content: "✓";
-color: #b58a35;
+color: #b18434;
 font-weight: bold;
-margin-right: 9px;
+margin-right: 10px;
 }
 
 /* =========================
 GENERAL SECTIONS
-========================= */
+========================== */
 
 .section {
 max-width: 1250px;
 margin: auto;
-padding: 85px 25px;
+padding: 80px 25px;
 }
 
 .section-title {
 text-align: center;
-margin-bottom: 50px;
+max-width: 750px;
+margin: 0 auto 50px;
 }
 
 .section-title h2 {
-color: #132b52;
+color: #102747;
 font-size: 38px;
 margin-bottom: 12px;
 }
 
 .section-title p {
 color: #667085;
-max-width: 700px;
-margin: auto;
 }
 
 /* =========================
 PERSONAL BANKING
-========================= */
+========================== */
 
 .personal {
-background: #f6f8fc;
+background: #f5f7fb;
 }
 
-.cards {
+.banking-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap: 24px;
+gap: 25px;
 }
 
-.card {
-background: #ffffff;
-padding: 30px;
+.bank-card {
+background: white;
+border: 1px solid #e4e8ef;
 border-radius: 12px;
-border: 1px solid #e5e9f0;
-transition: 0.25s;
+padding: 30px;
+transition: .25s ease;
 }
 
-.card:hover {
+.bank-card:hover {
 transform: translateY(-5px);
-box-shadow: 0 15px 35px rgba(16,39,71,0.10);
+box-shadow: 0 15px 35px rgba(16,39,71,.10);
 }
 
-.icon {
-width: 50px;
-height: 50px;
-border-radius: 10px;
+.bank-icon {
+width: 52px;
+height: 52px;
 background: #edf2f8;
+border-radius: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
-color: #b58a35;
+color: #b18434;
 font-size: 23px;
 margin-bottom: 20px;
 font-weight: bold;
 }
 
-.card h3 {
-color: #132b52;
-margin-bottom: 11px;
+.bank-card h3 {
+color: #102747;
+margin-bottom: 10px;
 font-size: 20px;
 }
 
-.card p {
+.bank-card p {
 color: #667085;
 font-size: 14px;
 margin-bottom: 18px;
 }
 
-.card-link {
-color: #132b52;
+.learn-more {
+color: #9a722c;
 font-weight: 700;
 font-size: 14px;
 }
 
-.card-link:hover {
-color: #b58a35;
-}
-
 /* =========================
-BUSINESS
-========================= */
+BUSINESS / INVESTMENTS
+========================== */
 
-.business {
-background: #ffffff;
+.dark-section {
+background: #102747;
+color: white;
 }
 
-.business-box {
-background: linear-gradient(135deg, #102747, #1c416f);
-color: #ffffff;
-border-radius: 18px;
-padding: 55px;
+.dark-section .section-title h2 {
+color: white;
+}
+
+.dark-section .section-title p {
+color: #dbe6f4;
+}
+
+.dark-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 50px;
-align-items: center;
-}
-
-.business-box h2 {
-font-size: 38px;
-margin-bottom: 18px;
-}
-
-.business-box p {
-color: #dbe5f2;
-margin-bottom: 25px;
-}
-
-.business-features {
-list-style: none;
-}
-
-.business-features li {
-padding: 12px 0;
-border-bottom: 1px solid rgba(255,255,255,0.12);
-color: #edf3fb;
-}
-
-.business-features li::before {
-content: "✓";
-color: #d5ae60;
-margin-right: 10px;
-font-weight: bold;
-}
-
-/* =========================
-INVESTMENTS
-========================= */
-
-.investments {
-background: #f6f8fc;
-}
-
-/* =========================
-INTERNATIONAL
-========================= */
-
-.international {
-background: #ffffff;
-}
-
-.international-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(3, 1fr);
 gap: 25px;
 }
 
-.international-card {
-background: #f8fafc;
-border: 1px solid #e5e9f0;
+.dark-card {
+background: rgba(255,255,255,.07);
+border: 1px solid rgba(255,255,255,.13);
+padding: 30px;
 border-radius: 12px;
-padding: 32px;
 }
 
-.international-card h3 {
-color: #132b52;
-margin-bottom: 12px;
-font-size: 21px;
+.dark-card h3 {
+margin-bottom: 10px;
+color: #e0bc6c;
 }
 
-.international-card p {
-color: #667085;
-font-size: 15px;
+.dark-card p {
+color: #dbe6f4;
+font-size: 14px;
+}
+
+/* =========================
+SECURITY
+========================== */
+
+.security-box {
+background: white;
+border: 1px solid #e5e9f0;
+border-radius: 14px;
+padding: 35px;
+max-width: 950px;
+margin: auto;
+}
+
+.security-box h3 {
+color: #102747;
+margin-bottom: 15px;
+}
+
+.security-list {
+list-style: none;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+}
+
+.security-list li {
+background: #f5f7fb;
+padding: 15px;
+border-radius: 8px;
+color: #475467;
+}
+
+.security-list li strong {
+display: block;
+color: #102747;
+margin-bottom: 4px;
 }
 
 /* =========================
 ABOUT
-========================= */
+========================== */
 
 .about {
-background: #ffffff;
+background: white;
 }
 
 .about-content {
@@ -405,7 +380,7 @@ text-align: center;
 }
 
 .about-content h2 {
-color: #132b52;
+color: #102747;
 font-size: 38px;
 margin-bottom: 20px;
 }
@@ -415,40 +390,15 @@ color: #667085;
 margin-bottom: 15px;
 }
 
-.values {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 22px;
-margin-top: 45px;
-text-align: left;
-}
-
-.value {
-padding: 25px;
-background: #f7f9fc;
-border-radius: 10px;
-border: 1px solid #e5e9f0;
-}
-
-.value h3 {
-color: #132b52;
-margin-bottom: 8px;
-}
-
-.value p {
-font-size: 14px;
-margin-bottom: 0;
-}
-
 /* =========================
 CONTACT
-========================= */
+========================== */
 
 .contact {
-background: #102747;
-color: #ffffff;
+background: linear-gradient(135deg, #102747, #183d68);
+color: white;
 text-align: center;
-padding: 85px 25px;
+padding: 80px 25px;
 }
 
 .contact h2 {
@@ -457,35 +407,85 @@ margin-bottom: 15px;
 }
 
 .contact p {
-color: #dbe5f2;
+color: #dbe6f4;
 margin-bottom: 28px;
 }
 
 /* =========================
-CLIENT ACCESS
-========================= */
+FOOTER
+========================== */
 
-.client-section {
-background: #f6f8fc;
-padding: 85px 25px;
+footer {
+background: #091a30;
+color: #aeb9c8;
+padding: 35px 25px;
+text-align: center;
+font-size: 13px;
 }
 
-.login-container {
-max-width: 480px;
-margin: auto;
-background: #ffffff;
-border: 1px solid #e5e9f0;
+footer strong {
+color: white;
+}
+
+.footer-links {
+margin-top: 12px;
+}
+
+.footer-links a {
+color: #aeb9c8;
+margin: 0 8px;
+}
+
+.footer-links a:hover {
+color: white;
+}
+
+/* =========================
+LOGIN MODAL
+========================== */
+
+.modal {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(5,18,35,.72);
+z-index: 3000;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+.modal.show {
+display: flex;
+}
+
+.login-box {
+background: white;
+width: 100%;
+max-width: 460px;
 border-radius: 15px;
-padding: 38px;
-box-shadow: 0 15px 40px rgba(16,39,71,0.08);
+padding: 35px;
+position: relative;
+box-shadow: 0 25px 70px rgba(0,0,0,.3);
 }
 
-.login-container h2 {
-color: #132b52;
+.close {
+position: absolute;
+top: 15px;
+right: 20px;
+border: none;
+background: transparent;
+font-size: 25px;
+cursor: pointer;
+color: #667085;
+}
+
+.login-box h2 {
+color: #102747;
 margin-bottom: 8px;
 }
 
-.login-container > p {
+.login-box > p {
 color: #667085;
 font-size: 14px;
 margin-bottom: 25px;
@@ -497,253 +497,260 @@ margin-bottom: 18px;
 
 .form-group label {
 display: block;
-color: #344054;
-font-size: 14px;
 font-weight: 700;
+color: #344054;
 margin-bottom: 7px;
+font-size: 14px;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
 width: 100%;
-padding: 13px 14px;
+padding: 13px;
 border: 1px solid #d0d5dd;
-border-radius: 6px;
+border-radius: 7px;
 outline: none;
 font-size: 15px;
 }
 
-.form-group input:focus {
-border-color: #132b52;
-box-shadow: 0 0 0 3px rgba(19,43,82,0.08);
+.form-group input:focus,
+.form-group select:focus {
+border-color: #102747;
 }
 
-.password-row {
-display: flex;
-gap: 8px;
+.login-submit {
+width: 100%;
+margin-top: 5px;
 }
 
-.password-row input {
-flex: 1;
-}
-
-.show-password {
-border: 1px solid #d0d5dd;
-background: #ffffff;
-padding: 0 13px;
-border-radius: 6px;
-cursor: pointer;
-color: #344054;
-}
-
-.login-options {
+.form-options {
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin: 8px 0 22px;
+margin: 12px 0 20px;
 font-size: 13px;
+color: #667085;
 }
 
-.login-options a {
-color: #132b52;
+.form-options a {
+color: #9a722c;
 font-weight: 700;
 }
 
-.sign-in-button {
-width: 100%;
-font-size: 15px;
-}
-
-.login-message {
+.demo-note {
 margin-top: 18px;
 padding: 12px;
-border-radius: 6px;
-background: #f2f4f7;
-color: #475467;
-font-size: 13px;
-display: none;
+background: #fff8e8;
+border: 1px solid #ead39a;
+border-radius: 7px;
+color: #70551d;
+font-size: 12px;
 }
+
+/* =========================
+DASHBOARD
+========================== */
 
 .dashboard {
 display: none;
-max-width: 1100px;
-margin: 35px auto 0;
+background: #f5f7fb;
+min-height: 100vh;
+padding-bottom: 80px;
+}
+
+.dashboard.show {
+display: block;
 }
 
 .dashboard-header {
-background: #ffffff;
-border: 1px solid #e5e9f0;
-border-radius: 12px;
-padding: 25px;
+background: #102747;
+color: white;
+padding: 30px 25px;
+}
+
+.dashboard-header-inner {
+max-width: 1200px;
+margin: auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
 gap: 20px;
 }
 
-.dashboard-header h3 {
-color: #132b52;
+.dashboard-header h2 {
+margin-bottom: 4px;
 }
 
 .dashboard-header p {
-color: #667085;
+color: #dbe6f4;
 font-size: 14px;
 }
 
-.sign-out {
-background: #ffffff;
-color: #132b52;
-border: 1px solid #132b52;
-padding: 10px 18px;
+.signout {
+background: white;
+color: #102747;
+border: none;
+padding: 10px 17px;
 border-radius: 6px;
-font-weight: 700;
 cursor: pointer;
+font-weight: 700;
 }
 
-.dashboard-cards {
+.dashboard-content {
+max-width: 1200px;
+margin: auto;
+padding: 40px 25px;
+}
+
+.balance-grid {
 display: grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(3,1fr);
 gap: 20px;
-margin-top: 20px;
+margin-bottom: 30px;
 }
 
-.account-box {
-background: #ffffff;
-border: 1px solid #e5e9f0;
+.balance-card {
+background: white;
+border: 1px solid #e4e8ef;
 border-radius: 12px;
 padding: 25px;
 }
 
-.account-box span {
+.balance-card span {
 color: #667085;
 font-size: 13px;
 }
 
-.account-box h4 {
-color: #132b52;
-margin-top: 6px;
-font-size: 21px;
+.balance-card h3 {
+color: #102747;
+font-size: 27px;
+margin-top: 7px;
 }
 
-.dashboard-links {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 15px;
-margin-top: 20px;
+.dashboard-panel {
+background: white;
+border: 1px solid #e4e8ef;
+border-radius: 12px;
+padding: 25px;
+margin-bottom: 25px;
 }
 
-.dashboard-link {
-background: #ffffff;
-border: 1px solid #e5e9f0;
-padding: 18px;
-border-radius: 10px;
-color: #132b52;
+.dashboard-panel h3 {
+color: #102747;
+margin-bottom: 15px;
+}
+
+.transaction {
+display: flex;
+justify-content: space-between;
+padding: 14px 0;
+border-bottom: 1px solid #edf0f4;
+font-size: 14px;
+}
+
+.transaction:last-child {
+border-bottom: none;
+}
+
+.positive {
+color: #26734d;
+font-weight: 700;
+}
+
+.negative {
+color: #a33d3d;
 font-weight: 700;
 }
 
 /* =========================
-FOOTER
-========================= */
+MFA
+========================== */
 
-footer {
-background: #0b1b31;
-color: #aeb9c8;
-padding: 35px 25px;
-text-align: center;
+.mfa-screen {
+display: none;
+}
+
+.mfa-screen.show {
+display: block;
+}
+
+.mfa-message {
+background: #f5f7fb;
+padding: 15px;
+border-radius: 8px;
+color: #475467;
 font-size: 14px;
-}
-
-footer strong {
-color: #ffffff;
-}
-
-.footer-links {
-margin-bottom: 12px;
-}
-
-.footer-links a {
-color: #cbd5e1;
-margin: 0 10px;
-}
-
-.footer-links a:hover {
-color: #ffffff;
+margin-bottom: 20px;
 }
 
 /* =========================
 RESPONSIVE
-========================= */
+========================== */
 
-@media (max-width: 950px) {
-
-nav {
-gap: 12px;
-}
-
-.hero-content,
-.business-box,
-.international-grid {
-grid-template-columns: 1fr;
-}
-
-.cards {
-grid-template-columns: repeat(2, 1fr);
-}
-
-.values {
-grid-template-columns: 1fr;
-}
-
-.dashboard-cards,
-.dashboard-links {
-grid-template-columns: 1fr;
-}
-}
-
-@media (max-width: 700px) {
-
-.nav {
-flex-direction: column;
-}
+@media (max-width: 900px) {
 
 nav {
-justify-content: center;
+display: none;
 }
 
-.hero {
-padding: 65px 20px;
+.hero-content {
+grid-template-columns: 1fr;
 }
 
 .hero h1 {
-font-size: 40px;
+font-size: 42px;
 }
 
-.hero-text {
+.banking-grid,
+.dark-grid,
+.balance-grid {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+@media (max-width: 600px) {
+
+.nav {
+padding: 14px 17px;
+}
+
+.logo {
+font-size: 23px;
+}
+
+.hero {
+padding: 65px 18px;
+}
+
+.hero h1 {
+font-size: 36px;
+}
+
+.hero p {
 font-size: 16px;
 }
 
-.cards {
-grid-template-columns: 1fr;
-}
-
 .section {
-padding: 65px 20px;
+padding: 60px 18px;
 }
 
-.business-box {
-padding: 32px;
-}
-
-.business-box h2 {
+.section-title h2 {
 font-size: 30px;
 }
 
-.login-container {
-padding: 27px;
+.banking-grid,
+.dark-grid,
+.balance-grid,
+.security-list {
+grid-template-columns: 1fr;
 }
 
-.dashboard-header {
-flex-direction: column;
-align-items: flex-start;
+.hero-card {
+padding: 25px;
+}
+
+.login-box {
+padding: 27px 22px;
 }
 }
 </style>
@@ -752,8 +759,10 @@ align-items: flex-start;
 <body>
 
 <!-- =========================
-HEADER
-========================= -->
+MAIN WEBSITE
+========================== -->
+
+<div id="mainWebsite">
 
 <header>
 <div class="nav">
@@ -770,16 +779,16 @@ IMPERIUM<span>.</span>
 <a href="#international">International</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-<a href="#client-access" class="login-nav">Client Access</a>
+<a href="#" class="client-btn" onclick="openLogin(); return false;">
+Client Access
+</a>
 </nav>
 
 </div>
 </header>
 
 
-<!-- =========================
-HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -788,7 +797,7 @@ HERO
 <div>
 
 <div class="eyebrow">
-Modern Financial Services
+MODERN BANKING & FINANCIAL SERVICES
 </div>
 
 <h1>
@@ -796,14 +805,14 @@ Financial solutions built around
 <span>your future.</span>
 </h1>
 
-<p class="hero-text">
-Imperium provides a modern approach to banking and financial
-services, combining thoughtful solutions, professional guidance
-and convenient access to your financial needs.
+<p>
+Imperium provides modern banking and financial-service
+solutions designed around individuals, businesses,
+investments and long-term financial planning.
 </p>
 
 <a href="#personal" class="button">
-Explore Services
+Explore Banking
 </a>
 
 <a href="#contact" class="button secondary">
@@ -815,17 +824,18 @@ Contact Us
 
 <div class="hero-card">
 
-<h3>Welcome to Imperium</h3>
+<h2>Welcome to Imperium</h2>
 
 <p>
-Explore financial solutions designed around individuals,
-businesses, investments and long-term financial planning.
+Explore financial solutions designed to support your
+everyday banking needs, financial goals and long-term plans.
 </p>
 
 <ul class="hero-list">
-<li>Personal banking solutions</li>
-<li>Investment account solutions</li>
-<li>International transfer services</li>
+<li>Current account services</li>
+<li>Savings account solutions</li>
+<li>Investment account services</li>
+<li>International transfers</li>
 <li>Business financial services</li>
 <li>Digital banking access</li>
 </ul>
@@ -841,11 +851,11 @@ Explore Services
 </section>
 
 
-<!-- =========================
-PERSONAL BANKING
-========================= -->
+<!-- PERSONAL BANKING -->
 
-<section class="section personal" id="personal">
+<section class="personal" id="personal">
+
+<div class="section">
 
 <div class="section-title">
 
@@ -859,185 +869,169 @@ manage their money and plan for the future.
 </div>
 
 
-<div class="cards">
+<div class="banking-grid">
 
+<!-- FIRST OPTION -->
+<div class="bank-card">
 
-<div class="card">
-
-<div class="icon">₿</div>
+<div class="bank-icon">£</div>
 
 <h3>Current Account</h3>
 
 <p>
-A convenient account for everyday financial activity,
-payments, transfers and managing available funds.
+A convenient account for everyday banking, payments,
+transfers and managing your regular financial activity.
 </p>
 
-<a href="#contact" class="card-link">
+<a href="#contact" class="learn-more">
 Learn More →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">◈</div>
+<div class="bank-icon">S</div>
 
 <h3>Savings Account</h3>
 
 <p>
-Save toward your goals while keeping your funds
-organized and accessible.
+Organise your savings and work toward your short-term
+and long-term financial goals with structured savings options.
 </p>
 
-<a href="#contact" class="card-link">
+<a href="#contact" class="learn-more">
 Learn More →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">◆</div>
+<div class="bank-icon">P</div>
 
 <h3>Personal Loans</h3>
 
 <p>
 Financing solutions designed around eligible personal
-needs and financial objectives.
+needs and planned financial requirements.
 </p>
 
-<a href="#contact" class="card-link">
+<a href="#contact" class="learn-more">
 Learn More →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">◇</div>
+<div class="bank-icon">I</div>
 
 <h3>Investment Accounts</h3>
 
 <p>
-Investment-focused account solutions for clients seeking
-to organize and manage their investment activities.
+Investment-focused account solutions designed to help
+clients organise and manage their investment objectives.
 </p>
 
-<a href="#investments" class="card-link">
+<a href="#investments" class="learn-more">
 Explore Investments →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">↗</div>
+<div class="bank-icon">↔</div>
 
 <h3>International Transfers</h3>
 
 <p>
-Convenient international transfer services designed for
-moving funds across supported destinations.
+Convenient international payment and transfer services
+for eligible personal financial needs.
 </p>
 
-<a href="#international" class="card-link">
+<a href="#international" class="learn-more">
 Learn More →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">▣</div>
+<div class="bank-icon">▣</div>
 
 <h3>Debit Card Services</h3>
 
 <p>
-Card services designed to provide convenient access
-to available funds and everyday payments.
+Access everyday spending and payment features through
+supported debit-card services.
 </p>
 
-<a href="#contact" class="card-link">
+<a href="#contact" class="learn-more">
 Learn More →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">▤</div>
+<div class="bank-icon">⌁</div>
 
 <h3>Online Banking</h3>
 
 <p>
-Access your banking services through a convenient
-online experience.
+Secure digital access designed to help clients review
+account information and manage supported services online.
 </p>
 
-<a href="#client-access" class="card-link">
+<a href="#" onclick="openLogin(); return false;" class="learn-more">
 Client Access →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">▥</div>
+<div class="bank-icon">M</div>
 
 <h3>Mobile Banking</h3>
 
 <p>
-Stay connected to your financial services through
-convenient mobile access.
+Mobile-friendly access to supported banking services,
+account information and financial tools.
 </p>
 
-<a href="#client-access" class="card-link">
+<a href="#" onclick="openLogin(); return false;" class="learn-more">
 Client Access →
 </a>
 
 </div>
 
 
-<div class="card">
+<div class="bank-card">
 
-<div class="icon">◉</div>
-
-<h3>Wealth &amp; Investment Services</h3>
-
-<p>
-Financial planning and investment-focused services
-designed around longer-term objectives.
-</p>
-
-<a href="#investments" class="card-link">
-Explore Investments →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">?</div>
+<div class="bank-icon">C</div>
 
 <h3>Customer Support</h3>
 
 <p>
-Assistance for questions about services, accounts,
-transfers and general financial support.
+Get assistance with account services, general enquiries,
+transfers and other supported financial services.
 </p>
 
-<a href="#contact" class="card-link">
+<a href="#contact" class="learn-more">
 Contact Support →
 </a>
+
+</div>
 
 </div>
 
@@ -1046,47 +1040,259 @@ Contact Support →
 </section>
 
 
-<!-- =========================
-BUSINESS BANKING
-========================= -->
+<!-- BUSINESS -->
 
-<section class="section business" id="business">
+<section class="dark-section" id="business">
 
-<div class="business-box">
+<div class="section">
 
-<div>
+<div class="section-title">
 
-<div class="eyebrow">
-Business Banking
-</div>
-
-<h2>
-Financial solutions for your business.
-</h2>
+<h2>Business Banking</h2>
 
 <p>
-Banking and financial services designed to support
-businesses, entrepreneurs and growing organizations.
+Financial services designed to support businesses,
+organisations and professional financial operations.
 </p>
-
-<a href="#contact" class="button">
-Explore Business Services
-</a>
 
 </div>
 
 
-<div>
+<div class="dark-grid">
 
-<ul class="business-features">
+<div class="dark-card">
 
-<li>Business Accounts</li>
-<li>Business Payments</li>
-<li>Business Transfers</li>
-<li>Business Financing</li>
-<li>Cash Management Solutions</li>
-<li>International Business Services</li>
-<li>Business Support</li>
+<h3>Business Accounts</h3>
+
+<p>
+Account solutions for managing business finances,
+payments and operational banking requirements.
+</p>
+
+</div>
+
+
+<div class="dark-card">
+
+<h3>Business Payments</h3>
+
+<p>
+Payment and transfer services designed around
+business financial activity.
+</p>
+
+</div>
+
+
+<div class="dark-card">
+
+<h3>Business Financial Services</h3>
+
+<p>
+Professional financial solutions designed to support
+business growth and long-term objectives.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INVESTMENTS -->
+
+<section id="investments">
+
+<div class="section">
+
+<div class="section-title">
+
+<h2>Investments & Wealth Services</h2>
+
+<p>
+Financial solutions focused on investment planning,
+portfolio objectives and long-term wealth management.
+</p>
+
+</div>
+
+
+<div class="banking-grid">
+
+<div class="bank-card">
+
+<div class="bank-icon">I</div>
+
+<h3>Investment Accounts</h3>
+
+<p>
+Account solutions designed for clients seeking to
+organise and manage investment-related objectives.
+</p>
+
+</div>
+
+
+<div class="bank-card">
+
+<div class="bank-icon">W</div>
+
+<h3>Wealth & Investment Services</h3>
+
+<p>
+Professional services focused on long-term financial
+planning and wealth objectives.
+</p>
+
+</div>
+
+
+<div class="bank-card">
+
+<div class="bank-icon">P</div>
+
+<h3>Financial Planning</h3>
+
+<p>
+Structured planning support designed to help clients
+make informed financial decisions.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNATIONAL -->
+
+<section class="personal" id="international">
+
+<div class="section">
+
+<div class="section-title">
+
+<h2>International Banking Services</h2>
+
+<p>
+Services for eligible clients requiring international
+transfers and cross-border financial support.
+</p>
+
+</div>
+
+
+<div class="banking-grid">
+
+<div class="bank-card">
+
+<div class="bank-icon">↔</div>
+
+<h3>International Transfers</h3>
+
+<p>
+Send and receive supported international payments
+through available transfer services.
+</p>
+
+</div>
+
+
+<div class="bank-card">
+
+<div class="bank-icon">FX</div>
+
+<h3>Currency Services</h3>
+
+<p>
+Currency-related services for eligible international
+financial transactions.
+</p>
+
+</div>
+
+
+<div class="bank-card">
+
+<div class="bank-icon">G</div>
+
+<h3>Global Financial Support</h3>
+
+<p>
+Assistance for clients managing financial activity
+involving multiple countries.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SECURITY -->
+
+<section>
+
+<div class="section">
+
+<div class="section-title">
+
+<h2>Digital Security</h2>
+
+<p>
+Client access is designed around secure authentication
+practices and account-session controls.
+</p>
+
+</div>
+
+
+<div class="security-box">
+
+<h3>Account Security Features</h3>
+
+<ul class="security-list">
+
+<li>
+<strong>Password Authentication</strong>
+Client accounts use password-based authentication.
+</li>
+
+<li>
+<strong>One-Time Verification</strong>
+Additional verification can be required during sign-in.
+</li>
+
+<li>
+<strong>Trusted Device</strong>
+Clients can choose whether a device should be recognised
+for future access.
+</li>
+
+<li>
+<strong>Session Timeout</strong>
+Inactive sessions can automatically expire for security.
+</li>
+
+<li>
+<strong>Sign Out</strong>
+Clients can securely end their current account session.
+</li>
+
+<li>
+<strong>Secure Client Access</strong>
+Account functionality should be connected to a secure
+server-side authentication system before production use.
+</li>
 
 </ul>
 
@@ -1097,220 +1303,25 @@ Explore Business Services
 </section>
 
 
-<!-- =========================
-INVESTMENTS
-========================= -->
+<!-- ABOUT -->
 
-<section class="section investments" id="investments">
+<section class="about" id="about">
 
-<div class="section-title">
-
-<h2>Investments</h2>
-
-<p>
-Explore investment-focused services designed to help
-clients organize their financial objectives.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<div class="card">
-
-<div class="icon">↗</div>
-
-<h3>Investment Accounts</h3>
-
-<p>
-Account solutions designed for managing investment
-activities and longer-term financial goals.
-</p>
-
-<a href="#contact" class="card-link">
-Learn More →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">◈</div>
-
-<h3>Wealth Services</h3>
-
-<p>
-Structured financial planning and wealth-focused
-services for eligible clients.
-</p>
-
-<a href="#contact" class="card-link">
-Learn More →
-</a>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">◆</div>
-
-<h3>Financial Planning</h3>
-
-<p>
-Guidance designed to help clients organize priorities
-and make informed financial decisions.
-</p>
-
-<a href="#contact" class="card-link">
-Learn More →
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-INTERNATIONAL
-========================= -->
-
-<section class="section international" id="international">
-
-<div class="section-title">
-
-<h2>International Services</h2>
-
-<p>
-Financial services designed for clients with
-international payment and transfer needs.
-</p>
-
-</div>
-
-
-<div class="international-grid">
-
-<div class="international-card">
-
-<h3>International Transfers</h3>
-
-<p>
-Send and receive funds across supported international
-destinations through available transfer services.
-</p>
-
-</div>
-
-
-<div class="international-card">
-
-<h3>International Payments</h3>
-
-<p>
-Convenient payment solutions for eligible personal
-and business financial activities.
-</p>
-
-</div>
-
-
-<div class="international-card">
-
-<h3>Currency Services</h3>
-
-<p>
-Access foreign-currency related services where
-available and supported.
-</p>
-
-</div>
-
-
-<div class="international-card">
-
-<h3>Global Financial Support</h3>
-
-<p>
-Assistance for clients managing financial needs
-involving multiple countries or currencies.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-ABOUT
-========================= -->
-
-<section class="section about" id="about">
+<div class="section">
 
 <div class="about-content">
 
-<div class="eyebrow">
-About Imperium
-</div>
-
-<h2>
-Built around clarity and confidence.
-</h2>
+<h2>About Imperium</h2>
 
 <p>
 Imperium is focused on delivering a modern and professional
-financial-services experience through accessible solutions,
-thoughtful service and convenient digital experiences.
+banking and financial-services experience.
 </p>
 
 <p>
-Our approach is built around transparency, professionalism
-and helping clients make informed financial decisions.
+Our approach is built around clarity, responsible financial
+planning, convenient digital services and client-focused support.
 </p>
-
-
-<div class="values">
-
-<div class="value">
-
-<h3>Professional</h3>
-
-<p>
-A modern experience designed around clear information
-and professional service.
-</p>
-
-</div>
-
-
-<div class="value">
-
-<h3>Convenient</h3>
-
-<p>
-Digital access and financial services designed to
-make everyday banking easier.
-</p>
-
-</div>
-
-
-<div class="value">
-
-<h3>Client Focused</h3>
-
-<p>
-Services organized around the needs and objectives
-of individuals and businesses.
-</p>
-
-</div>
 
 </div>
 
@@ -1319,50 +1330,79 @@ of individuals and businesses.
 </section>
 
 
-<!-- =========================
-CLIENT ACCESS
-========================= -->
+<!-- CONTACT -->
 
-<section class="client-section" id="client-access">
+<section class="contact" id="contact">
 
-<div class="section-title">
+<h2>Let's Talk</h2>
 
-<div class="eyebrow">
-Secure Client Access
+<p>
+Have a question about our banking and financial services?
+Get in touch with Imperium.
+</p>
+
+<a href="mailto:contact@imperium.example" class="button">
+Contact Imperium
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 <strong>Imperium</strong>. All rights reserved.
+</p>
+
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#personal">Personal Banking</a>
+<a href="#business">Business Banking</a>
 </div>
+
+</footer>
+
+</div>
+
+
+<!-- =========================
+LOGIN MODAL
+========================== -->
+
+<div class="modal" id="loginModal">
+
+<div class="login-box">
+
+<button class="close" onclick="closeLogin()">
+×
+</button>
+
+
+<!-- LOGIN -->
+
+<div id="loginScreen">
 
 <h2>Client Access</h2>
 
 <p>
-Sign in to access the Imperium client interface.
+Sign in to access your Imperium client dashboard.
 </p>
 
-</div>
-
-
-<div class="login-container" id="loginContainer">
-
-<h2>Sign In</h2>
-
-<p>
-Enter your client credentials to continue.
-</p>
-
-
-<form id="loginForm">
+<form onsubmit="startAuthentication(event)">
 
 <div class="form-group">
 
-<label for="username">
-Username or Email
+<label for="clientId">
+Client ID
 </label>
 
 <input
+id="clientId"
 type="text"
-id="username"
-name="username"
-autocomplete="username"
-placeholder="Enter your username or email"
+placeholder="Enter your Client ID"
 required
 >
 
@@ -1375,279 +1415,455 @@ required
 Password
 </label>
 
-<div class="password-row">
-
 <input
-type="password"
 id="password"
-name="password"
-autocomplete="current-password"
+type="password"
 placeholder="Enter your password"
 required
 >
 
-<button
-type="button"
-class="show-password"
-id="showPassword"
->
-Show
-</button>
-
-</div>
-
 </div>
 
 
-<div class="login-options">
+<div class="form-options">
 
 <label>
-<input type="checkbox">
-Remember me
+<input type="checkbox" id="trustedDevice">
+Trust this device
 </label>
 
-<a href="#contact">
-Forgot Password?
+<a href="#" onclick="showCreateAccount(); return false;">
+Create account
 </a>
 
 </div>
 
 
-<button
-type="submit"
-class="button sign-in-button"
->
+<button class="button login-submit" type="submit">
 Sign In
 </button>
 
 </form>
 
 
-<div class="login-message" id="loginMessage"></div>
+<div class="demo-note">
+<strong>Demo interface:</strong>
+This front-end demonstration does not transmit or store
+real passwords. Connect this interface to a secure
+server-side authentication service before accepting real
+customer credentials.
+</div>
 
 </div>
 
 
-<!-- DEMO DASHBOARD -->
+<!-- MFA -->
 
-<div class="dashboard" id="dashboard">
+<div class="mfa-screen" id="mfaScreen">
 
-<div class="dashboard-header">
-
-<div>
-
-<h3>Welcome to Client Access</h3>
+<h2>Security Verification</h2>
 
 <p>
-Your client dashboard.
+Verify your identity to continue.
 </p>
+
+<div class="mfa-message">
+Enter the one-time verification code provided by your
+authentication system.
+</div>
+
+<div class="form-group">
+
+<label for="verificationCode">
+Verification Code
+</label>
+
+<input
+id="verificationCode"
+type="text"
+maxlength="6"
+placeholder="Enter verification code"
+>
 
 </div>
 
-<button
-type="button"
-class="sign-out"
-id="signOut"
->
-Sign Out
+
+<button class="button login-submit" onclick="completeLogin()">
+Verify & Continue
 </button>
 
 </div>
 
 
-<div class="dashboard-cards">
+<!-- CREATE ACCOUNT -->
 
-<div class="account-box">
+<div class="mfa-screen" id="createAccountScreen">
 
-<span>Current Account</span>
-
-<h4>Account Overview</h4>
-
-</div>
-
-
-<div class="account-box">
-
-<span>Savings Account</span>
-
-<h4>Account Overview</h4>
-
-</div>
-
-
-<div class="account-box">
-
-<span>Investment Accounts</span>
-
-<h4>Account Overview</h4>
-
-</div>
-
-</div>
-
-
-<div class="dashboard-links">
-
-<div class="dashboard-link">
-Account Details
-</div>
-
-<div class="dashboard-link">
-Transactions
-</div>
-
-<div class="dashboard-link">
-Transfers
-</div>
-
-<div class="dashboard-link">
-International Transfers
-</div>
-
-<div class="dashboard-link">
-Statements
-</div>
-
-<div class="dashboard-link">
-Cards
-</div>
-
-<div class="dashboard-link">
-Profile &amp; Settings
-</div>
-
-<div class="dashboard-link">
-Security
-</div>
-
-<div class="dashboard-link">
-Customer Support
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-<h2>Let's Talk</h2>
+<h2>Create Client Account</h2>
 
 <p>
-Have a question about our services? Get in touch with Imperium.
+Create your client-access profile.
 </p>
 
-<a
-href="mailto:contact@imperium.example"
-class="button"
+<form onsubmit="createDemoAccount(event)">
+
+<div class="form-group">
+
+<label>
+Full Name
+</label>
+
+<input
+type="text"
+placeholder="Full name"
+required
 >
-Contact Imperium
-</a>
-
-</section>
-
-
-<!-- =========================
-FOOTER
-========================= -->
-
-<footer>
-
-<div class="footer-links">
-
-<a href="#home">Home</a>
-<a href="#personal">Personal Banking</a>
-<a href="#business">Business</a>
-<a href="#investments">Investments</a>
-<a href="#international">International</a>
-<a href="#contact">Contact</a>
 
 </div>
 
-<p>
-© 2026 <strong>Imperium</strong>. All rights reserved.
-</p>
 
-</footer>
+<div class="form-group">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+placeholder="Email address"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Create Password
+</label>
+
+<input
+type="password"
+placeholder="Create password"
+required
+>
+
+</div>
+
+
+<button class="button login-submit" type="submit">
+Create Account
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
 
 
 <!-- =========================
-CLIENT ACCESS JAVASCRIPT
-========================= -->
+CLIENT DASHBOARD
+========================== -->
+
+<section class="dashboard" id="dashboard">
+
+<div class="dashboard-header">
+
+<div class="dashboard-header-inner">
+
+<div>
+<h2>Imperium Client Dashboard</h2>
+<p>
+Secure client access
+</p>
+</div>
+
+<button class="signout" onclick="signOut()">
+Sign Out
+</button>
+
+</div>
+
+</div>
+
+
+<div class="dashboard-content">
+
+<div class="balance-grid">
+
+<div class="balance-card">
+<span>Current Account</span>
+<h3>£25,480.00</h3>
+</div>
+
+<div class="balance-card">
+<span>Savings Account</span>
+<h3>£48,750.00</h3>
+</div>
+
+<div class="balance-card">
+<span>Investment Account</span>
+<h3>£82,300.00</h3>
+</div>
+
+</div>
+
+
+<div class="dashboard-panel">
+
+<h3>Recent Activity</h3>
+
+<div class="transaction">
+
+<span>
+International Transfer
+</span>
+
+<span class="negative">
+-£2,500.00
+</span>
+
+</div>
+
+
+<div class="transaction">
+
+<span>
+Salary Payment
+</span>
+
+<span class="positive">
++£5,200.00
+</span>
+
+</div>
+
+
+<div class="transaction">
+
+<span>
+Savings Transfer
+</span>
+
+<span class="negative">
+-£750.00
+</span>
+
+</div>
+
+</div>
+
+
+<div class="dashboard-panel">
+
+<h3>Account Services</h3>
+
+<p>
+Current Account &nbsp; | &nbsp;
+Savings &nbsp; | &nbsp;
+Investments &nbsp; | &nbsp;
+International Transfers &nbsp; | &nbsp;
+Cards
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 
 <script>
 
-const loginForm = document.getElementById("loginForm");
-const loginContainer = document.getElementById("loginContainer");
-const dashboard = document.getElementById("dashboard");
-const loginMessage = document.getElementById("loginMessage");
+/* =========================
+LOGIN
+========================== */
 
-const passwordInput = document.getElementById("password");
-const showPassword = document.getElementById("showPassword");
+const loginModal = document.getElementById("loginModal");
 
-const signOut = document.getElementById("signOut");
+const loginScreen = document.getElementById("loginScreen");
+
+const mfaScreen = document.getElementById("mfaScreen");
+
+const createAccountScreen =
+document.getElementById("createAccountScreen");
 
 
-/* Show / Hide password */
+function openLogin() {
 
-showPassword.addEventListener("click", function () {
+loginModal.classList.add("show");
 
-if (passwordInput.type === "password") {
+loginScreen.style.display = "block";
 
-passwordInput.type = "text";
-showPassword.textContent = "Hide";
+mfaScreen.classList.remove("show");
 
-} else {
+createAccountScreen.classList.remove("show");
 
-passwordInput.type = "password";
-showPassword.textContent = "Show";
+}
+
+
+function closeLogin() {
+
+loginModal.classList.remove("show");
+
+}
+
+
+function showCreateAccount() {
+
+loginScreen.style.display = "none";
+
+mfaScreen.classList.remove("show");
+
+createAccountScreen.classList.add("show");
+
+}
+
+
+function startAuthentication(event) {
+
+event.preventDefault();
+
+/*
+DEMO ONLY
+
+In a real banking environment this form should send
+authentication information to a secure server over HTTPS.
+
+Never store real passwords in this HTML file.
+*/
+
+loginScreen.style.display = "none";
+
+mfaScreen.classList.add("show");
+
+}
+
+
+function completeLogin() {
+
+const code =
+document.getElementById("verificationCode").value.trim();
+
+if (code.length < 4) {
+
+alert("Please enter your verification code.");
+
+return;
+
+}
+
+closeLogin();
+
+document.getElementById("mainWebsite").style.display = "none";
+
+document.getElementById("dashboard")
+.classList.add("show");
+
+window.scrollTo(0,0);
+
+}
+
+
+function createDemoAccount(event) {
+
+event.preventDefault();
+
+alert(
+"Account creation interface is ready. " +
+"Connect this form to your secure account-registration " +
+"backend before using real customer information."
+);
+
+openLogin();
+
+}
+
+
+/* =========================
+SIGN OUT
+========================== */
+
+function signOut() {
+
+document.getElementById("dashboard")
+.classList.remove("show");
+
+document.getElementById("mainWebsite")
+.style.display = "block";
+
+window.scrollTo(0,0);
+
+alert("You have been signed out.");
+
+}
+
+
+/* =========================
+CLOSE MODAL WHEN CLICKING
+OUTSIDE LOGIN BOX
+========================== */
+
+loginModal.addEventListener("click", function(event) {
+
+if (event.target === loginModal) {
+
+closeLogin();
 
 }
 
 });
 
 
-/*
-Demo client-access interface.
+/* =========================
+DEMO SESSION TIMEOUT
+========================== */
 
-This does NOT send or store passwords.
-A production banking login should connect
-to a secure authentication backend.
-*/
+let sessionTimer;
 
-loginForm.addEventListener("submit", function (event) {
+function startSessionTimer() {
 
-event.preventDefault();
+clearTimeout(sessionTimer);
 
-loginContainer.style.display = "none";
-dashboard.style.display = "block";
+sessionTimer = setTimeout(function() {
 
-window.location.hash = "client-access";
+const dashboard =
+document.getElementById("dashboard");
 
-});
+if (dashboard.classList.contains("show")) {
 
+dashboard.classList.remove("show");
 
-/* Sign out */
+document.getElementById("mainWebsite")
+.style.display = "block";
 
-signOut.addEventListener("click", function () {
+alert(
+"Your session has expired due to inactivity."
+);
 
-dashboard.style.display = "none";
-loginContainer.style.display = "block";
+window.scrollTo(0,0);
 
-loginForm.reset();
+}
 
-passwordInput.type = "password";
-showPassword.textContent = "Show";
+}, 15 * 60 * 1000);
 
-loginMessage.style.display = "none";
+}
 
-window.location.hash = "client-access";
+document.addEventListener("click", function() {
+
+if (
+document
+.getElementById("dashboard")
+.classList.contains("show")
+) {
+
+startSessionTimer();
+
+}
 
 });
 
