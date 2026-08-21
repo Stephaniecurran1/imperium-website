@@ -3,21 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Imperium | Financial Services</title>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+html{
+scroll-behavior:smooth
+}
+
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:#f5f7fb;
 color:#172033;
 line-height:1.6
 }
-a{text-decoration:none}
-button,input,select{font-family:inherit}
+
+a{
+text-decoration:none
+}
+
+button,
+input,
+select,
+textarea{
+font-family:inherit
+}
+
+button{
+cursor:pointer
+}
+
+/* =========================
+HEADER
+========================= */
 
 header{
 background:#fff;
@@ -43,11 +69,13 @@ letter-spacing:1.5px;
 color:#102747
 }
 
-.logo span{color:#c39a4a}
+.logo span{
+color:#c39a4a
+}
 
 nav{
 display:flex;
-gap:23px;
+gap:20px;
 align-items:center
 }
 
@@ -57,9 +85,12 @@ font-size:14px;
 font-weight:600
 }
 
-nav a:hover{color:#b18434}
+nav a:hover{
+color:#b18434
+}
 
-.client-btn,.button{
+.client-btn,
+.button{
 background:#102747;
 color:#fff!important;
 padding:12px 19px;
@@ -69,12 +100,22 @@ border:0;
 cursor:pointer
 }
 
-.client-btn:hover,.button:hover{
+.client-btn:hover,
+.button:hover{
 background:#193c68
 }
 
+/* =========================
+HERO
+========================= */
+
 .hero{
-background:linear-gradient(135deg,#0d2342,#173f70,#204e8b);
+background:linear-gradient(
+135deg,
+#0d2342,
+#173f70,
+#204e8b
+);
 color:#fff;
 padding:95px 25px
 }
@@ -102,7 +143,9 @@ line-height:1.08;
 margin-bottom:25px
 }
 
-.hero h1 span{color:#d8b15d}
+.hero h1 span{
+color:#d8b15d
+}
 
 .hero p{
 color:#dbe6f4;
@@ -111,15 +154,26 @@ max-width:670px;
 margin-bottom:30px
 }
 
-.button.gold{background:#c39a4a}
-.button.gold:hover{background:#ae8439}
+.button.gold{
+background:#c39a4a
+}
+
+.button.gold:hover{
+background:#ae8439
+}
 
 .button.secondary{
 background:transparent!important;
-border:1px solid #fff
+border:1px solid #fff;
+margin-left:8px
 }
 
-.hero-card,.card,.security-box,.dashboard-panel,.balance-card{
+.hero-card,
+.card,
+.security-box,
+.dashboard-panel,
+.balance-card,
+.admin-card{
 background:#fff;
 border:1px solid #e4e8ef;
 border-radius:14px;
@@ -131,11 +185,16 @@ box-shadow:0 25px 60px rgba(0,0,0,.25);
 color:#172033
 }
 
-.hero-card h2,.card h3,.dashboard-panel h3,.balance-card h3{
+.hero-card h2,
+.card h3,
+.dashboard-panel h3,
+.balance-card h3,
+.admin-card h4{
 color:#102747
 }
 
-.hero-card p,.card p{
+.hero-card p,
+.card p{
 color:#667085;
 font-size:14px;
 margin:12px 0 18px
@@ -159,6 +218,10 @@ font-weight:bold;
 margin-right:10px
 }
 
+/* =========================
+SECTIONS
+========================= */
+
 .section{
 max-width:1250px;
 margin:auto;
@@ -177,7 +240,9 @@ font-size:38px;
 margin-bottom:12px
 }
 
-.section-title p{color:#667085}
+.section-title p{
+color:#667085
+}
 
 .grid{
 display:grid;
@@ -185,7 +250,9 @@ grid-template-columns:repeat(3,1fr);
 gap:25px
 }
 
-.card{transition:.25s}
+.card{
+transition:.25s
+}
 
 .card:hover{
 transform:translateY(-4px);
@@ -206,7 +273,9 @@ font-weight:bold;
 margin-bottom:20px
 }
 
-.card h3{margin-bottom:10px}
+.card h3{
+margin-bottom:10px
+}
 
 .learn{
 color:#9a722c;
@@ -214,13 +283,22 @@ font-weight:700;
 font-size:14px
 }
 
+/* =========================
+DARK SECTION
+========================= */
+
 .dark{
 background:#102747;
 color:#fff
 }
 
-.dark .section-title h2{color:#fff}
-.dark .section-title p{color:#dbe6f4}
+.dark .section-title h2{
+color:#fff
+}
+
+.dark .section-title p{
+color:#dbe6f4
+}
 
 .dark-card{
 background:rgba(255,255,255,.07);
@@ -239,12 +317,18 @@ color:#dbe6f4;
 font-size:14px
 }
 
+/* =========================
+SECURITY
+========================= */
+
 .security{
 max-width:950px;
 margin:auto
 }
 
-.security-box h3{margin-bottom:18px}
+.security-box h3{
+margin-bottom:18px
+}
 
 .security-list{
 list-style:none;
@@ -266,7 +350,13 @@ color:#102747;
 margin-bottom:4px
 }
 
-.about{background:#fff}
+/* =========================
+ABOUT
+========================= */
+
+.about{
+background:#fff
+}
 
 .about-content{
 max-width:900px;
@@ -285,8 +375,16 @@ color:#667085;
 margin-bottom:15px
 }
 
+/* =========================
+CONTACT
+========================= */
+
 .contact{
-background:linear-gradient(135deg,#102747,#183d68);
+background:linear-gradient(
+135deg,
+#102747,
+#183d68
+);
 color:#fff;
 text-align:center;
 padding:80px 25px
@@ -302,6 +400,10 @@ color:#dbe6f4;
 margin-bottom:28px
 }
 
+/* =========================
+FOOTER
+========================= */
+
 footer{
 background:#091a30;
 color:#aeb9c8;
@@ -310,7 +412,13 @@ text-align:center;
 font-size:13px
 }
 
-footer strong{color:#fff}
+footer strong{
+color:#fff
+}
+
+/* =========================
+MODAL
+========================= */
 
 .modal{
 display:none;
@@ -323,12 +431,16 @@ justify-content:center;
 padding:20px
 }
 
-.modal.show{display:flex}
+.modal.show{
+display:flex
+}
 
 .login-box{
 background:#fff;
 width:100%;
 max-width:460px;
+max-height:90vh;
+overflow:auto;
 border-radius:15px;
 padding:35px;
 position:relative;
@@ -357,7 +469,9 @@ font-size:14px;
 margin-bottom:25px
 }
 
-.form-group{margin-bottom:18px}
+.form-group{
+margin-bottom:18px
+}
 
 .form-group label{
 display:block;
@@ -368,7 +482,8 @@ font-size:14px
 }
 
 .form-group input,
-.form-group select{
+.form-group select,
+.form-group textarea{
 width:100%;
 padding:13px;
 border:1px solid #d0d5dd;
@@ -378,8 +493,14 @@ font-size:15px;
 background:#fff
 }
 
+.form-group textarea{
+min-height:100px;
+resize:vertical
+}
+
 .form-group input:focus,
-.form-group select:focus{
+.form-group select:focus,
+.form-group textarea:focus{
 border-color:#102747
 }
 
@@ -423,7 +544,13 @@ color:#26734d;
 border:1px solid #b9dfc6
 }
 
-.hidden{display:none!important}
+.hidden{
+display:none!important
+}
+
+/* =========================
+DASHBOARD
+========================= */
 
 .dashboard{
 display:none;
@@ -432,7 +559,9 @@ min-height:100vh;
 padding-bottom:80px
 }
 
-.dashboard.show{display:block}
+.dashboard.show{
+display:block
+}
 
 .dashboard-header{
 background:#102747;
@@ -487,15 +616,24 @@ font-size:27px;
 margin-top:7px
 }
 
+.account-number{
+font-size:13px;
+color:#667085;
+margin-top:5px
+}
+
 .transaction{
 display:flex;
 justify-content:space-between;
+gap:20px;
 padding:14px 0;
 border-bottom:1px solid #edf0f4;
 font-size:14px
 }
 
-.transaction:last-child{border-bottom:0}
+.transaction:last-child{
+border-bottom:0
+}
 
 .positive{
 color:#26734d;
@@ -507,13 +645,9 @@ color:#a33d3d;
 font-weight:700
 }
 
-.account-number{
-font-size:13px;
-color:#667085;
-margin-top:5px
-}
-
-/* ADMIN */
+/* =========================
+ADMIN
+========================= */
 
 .admin-button{
 display:none;
@@ -572,25 +706,18 @@ border-radius:50%;
 background:#49a078
 }
 
-.admin-tools{
+.admin-card-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px
-}
-
-.admin-tools .admin-card:nth-child(3){
-grid-column:1 / -1
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-bottom:20px
 }
 
 .admin-card{
-background:#fff;
-border:1px solid #e4e8ef;
-border-radius:14px;
 padding:25px
 }
 
 .admin-card h4{
-color:#102747;
 margin-bottom:8px
 }
 
@@ -599,77 +726,37 @@ color:#667085;
 font-size:14px
 }
 
-.admin-account{
-border:1px solid #e4e8ef;
-border-radius:10px;
-padding:15px;
-margin-top:12px;
-cursor:pointer;
-transition:.2s
+.admin-tools{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-top:20px
 }
 
-.admin-account:hover{
-border-color:#c39a4a;
-box-shadow:0 5px 18px rgba(16,39,71,.08)
+.admin-table{
+width:100%;
+border-collapse:collapse;
+font-size:13px
 }
 
-.admin-account.active{
-border-color:#c39a4a;
-background:#fffaf0
-}
-
-.admin-account-title{
-font-weight:700;
-color:#102747
-}
-
-.admin-account-meta{
-font-size:13px;
-color:#667085;
-margin-top:4px
-}
-
-.admin-account-balance{
-font-size:18px;
-font-weight:700;
-color:#102747;
-margin-top:7px
-}
-
-.admin-history-item{
-padding:13px 0;
+.admin-table th,
+.admin-table td{
+text-align:left;
+padding:12px 10px;
 border-bottom:1px solid #edf0f4
 }
 
-.admin-history-item:last-child{
-border-bottom:0
+.admin-table th{
+color:#344054;
+background:#f8fafc
 }
 
-.admin-history-top{
-display:flex;
-justify-content:space-between;
-gap:15px
+.admin-table td{
+color:#475467
 }
 
-.admin-history-description{
-font-weight:700;
-color:#344054
-}
-
-.admin-history-date{
-font-size:12px;
-color:#98a2b3;
-margin-top:3px
-}
-
-.admin-credit{
-color:#26734d;
-font-weight:700
-}
-
-.admin-debit{
-color:#a33d3d;
-font-weight:700
+.admin-table-wrap{
+overflow:auto
 }
 
 .admin-notice{
@@ -682,7 +769,41 @@ color:#72551f;
 font-size:13px
 }
 
-/* MOBILE */
+.small-button{
+padding:9px 12px;
+border:0;
+border-radius:6px;
+background:#102747;
+color:#fff;
+font-weight:700;
+font-size:12px
+}
+
+.small-button:hover{
+background:#193c68
+}
+
+.danger-button{
+background:#9b3030
+}
+
+.danger-button:hover{
+background:#7e2525
+}
+
+.status-pill{
+display:inline-block;
+padding:4px 8px;
+border-radius:20px;
+font-size:11px;
+font-weight:700;
+background:#edf2f8;
+color:#344054
+}
+
+/* =========================
+RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
@@ -711,20 +832,11 @@ grid-template-columns:1fr
 font-size:42px
 }
 
-.grid,.balance-grid{
-grid-template-columns:1fr 1fr
-}
-
-}
-
-@media(max-width:800px){
-
+.grid,
+.balance-grid,
+.admin-card-grid,
 .admin-tools{
-grid-template-columns:1fr
-}
-
-.admin-tools .admin-card:nth-child(3){
-grid-column:auto
+grid-template-columns:1fr 1fr
 }
 
 }
@@ -759,7 +871,11 @@ padding:60px 18px
 font-size:30px
 }
 
-.grid,.balance-grid,.security-list{
+.grid,
+.balance-grid,
+.security-list,
+.admin-card-grid,
+.admin-tools{
 grid-template-columns:1fr
 }
 
@@ -775,6 +891,11 @@ font-size:12px
 .admin-button{
 padding:9px 12px;
 font-size:12px
+}
+
+.dashboard-header-inner{
+align-items:flex-start;
+flex-direction:column
 }
 
 }
@@ -796,14 +917,33 @@ font-size:11px
 }
 
 }
+
+/* =========================
+LOADING
+========================= */
+
+.loading{
+opacity:.65;
+pointer-events:none
+}
+
+.spinner-text{
+font-size:13px;
+color:#667085
+}
 </style>
 </head>
 
 <body>
 
+<!-- =====================================================
+MAIN WEBSITE
+===================================================== -->
+
 <div id="mainWebsite">
 
 <header>
+
 <div class="nav">
 
 <a href="#home" class="logo">
@@ -831,7 +971,9 @@ Client Access
 </nav>
 
 </div>
+
 </header>
+
 
 <section class="hero" id="home">
 
@@ -849,7 +991,9 @@ Financial solutions built around
 </h1>
 
 <p>
-Imperium provides a modern digital financial-services experience designed around individuals, businesses, investments and long-term financial planning.
+Imperium provides a modern digital financial-services platform
+designed around individuals, businesses, investments and
+long-term financial planning.
 </p>
 
 <a href="#personal" class="button gold">
@@ -862,12 +1006,14 @@ Contact Us
 
 </div>
 
+
 <div class="hero-card">
 
 <h2>Welcome to Imperium</h2>
 
 <p>
-Explore our range of financial-service solutions and access your client portal securely.
+Explore our range of financial-service solutions and access
+your client portal securely.
 </p>
 
 <ul class="hero-list">
@@ -888,7 +1034,9 @@ Explore Services
 </div>
 
 </div>
+
 </section>
+
 
 <section id="personal">
 
@@ -899,7 +1047,8 @@ Explore Services
 <h2>Personal Services</h2>
 
 <p>
-Financial solutions designed to support everyday financial management and longer-term goals.
+Financial solutions designed to support everyday financial
+management and longer-term goals.
 </p>
 
 </div>
@@ -909,48 +1058,68 @@ Financial solutions designed to support everyday financial management and longer
 <div class="card">
 <div class="icon">£</div>
 <h3>Current Account</h3>
-<p>Everyday account services for payments, transfers and financial management.</p>
+<p>
+Everyday account services for payments, transfers and
+financial management.
+</p>
 <a href="#contact" class="learn">Learn More →</a>
 </div>
 
 <div class="card">
 <div class="icon">S</div>
 <h3>Savings</h3>
-<p>Structured savings solutions designed around short-term and long-term financial objectives.</p>
+<p>
+Structured savings solutions designed around short-term
+and long-term financial objectives.
+</p>
 <a href="#contact" class="learn">Learn More →</a>
 </div>
 
 <div class="card">
 <div class="icon">P</div>
 <h3>Personal Finance</h3>
-<p>Financial solutions designed around eligible personal requirements.</p>
+<p>
+Financial solutions designed around eligible personal
+requirements.
+</p>
 <a href="#contact" class="learn">Learn More →</a>
 </div>
 
 <div class="card">
 <div class="icon">I</div>
 <h3>Investment Services</h3>
-<p>Investment-focused services for clients working toward longer-term financial objectives.</p>
+<p>
+Investment-focused services for clients working toward
+longer-term financial objectives.
+</p>
 <a href="#investments" class="learn">Explore →</a>
 </div>
 
 <div class="card">
 <div class="icon">↔</div>
 <h3>International Transfers</h3>
-<p>Cross-border transfer services for supported international financial activity.</p>
+<p>
+Cross-border transfer services for supported international
+financial activity.
+</p>
 <a href="#international" class="learn">Learn More →</a>
 </div>
 
 <div class="card">
 <div class="icon">▣</div>
 <h3>Card Services</h3>
-<p>Digital access to supported payment and card-related services.</p>
+<p>
+Digital access to supported payment and card-related services.
+</p>
 <a href="#contact" class="learn">Learn More →</a>
 </div>
 
 </div>
+
 </div>
+
 </section>
+
 
 <section class="dark" id="business">
 
@@ -961,7 +1130,8 @@ Financial solutions designed to support everyday financial management and longer
 <h2>Business Services</h2>
 
 <p>
-Professional financial solutions designed around business and organisational requirements.
+Professional financial solutions designed around business
+and organisational requirements.
 </p>
 
 </div>
@@ -970,22 +1140,33 @@ Professional financial solutions designed around business and organisational req
 
 <div class="dark-card">
 <h3>Business Accounts</h3>
-<p>Account solutions for managing business financial activity and payments.</p>
+<p>
+Account solutions for managing business financial activity
+and payments.
+</p>
 </div>
 
 <div class="dark-card">
 <h3>Business Payments</h3>
-<p>Payment and transfer services designed around business operations.</p>
+<p>
+Payment and transfer services designed around business
+operations.
+</p>
 </div>
 
 <div class="dark-card">
 <h3>Financial Services</h3>
-<p>Solutions supporting business financial planning and objectives.</p>
+<p>
+Solutions supporting business financial planning and objectives.
+</p>
 </div>
 
 </div>
+
 </div>
+
 </section>
+
 
 <section id="investments">
 
@@ -996,7 +1177,8 @@ Professional financial solutions designed around business and organisational req
 <h2>Investments & Wealth Services</h2>
 
 <p>
-Services focused on investment planning, portfolio objectives and long-term financial goals.
+Services focused on investment planning, portfolio objectives
+and long-term financial goals.
 </p>
 
 </div>
@@ -1006,24 +1188,34 @@ Services focused on investment planning, portfolio objectives and long-term fina
 <div class="card">
 <div class="icon">I</div>
 <h3>Investment Accounts</h3>
-<p>Investment-oriented account services for supported client objectives.</p>
+<p>
+Investment-oriented account services for supported client
+objectives.
+</p>
 </div>
 
 <div class="card">
 <div class="icon">W</div>
 <h3>Wealth Services</h3>
-<p>Long-term financial planning and wealth-management support.</p>
+<p>
+Long-term financial planning and wealth-management support.
+</p>
 </div>
 
 <div class="card">
 <div class="icon">P</div>
 <h3>Financial Planning</h3>
-<p>Structured planning support for informed financial decisions.</p>
+<p>
+Structured planning support for informed financial decisions.
+</p>
 </div>
 
 </div>
+
 </div>
+
 </section>
+
 
 <section id="international">
 
@@ -1034,7 +1226,8 @@ Services focused on investment planning, portfolio objectives and long-term fina
 <h2>International Services</h2>
 
 <p>
-Services supporting eligible clients with cross-border financial activity.
+Services supporting eligible clients with cross-border
+financial activity.
 </p>
 
 </div>
@@ -1044,24 +1237,34 @@ Services supporting eligible clients with cross-border financial activity.
 <div class="card">
 <div class="icon">↔</div>
 <h3>International Transfers</h3>
-<p>Supported international payment and transfer services.</p>
+<p>
+Supported international payment and transfer services.
+</p>
 </div>
 
 <div class="card">
 <div class="icon">FX</div>
 <h3>Currency Services</h3>
-<p>Currency-related services for supported international transactions.</p>
+<p>
+Currency-related services for supported international
+transactions.
+</p>
 </div>
 
 <div class="card">
 <div class="icon">G</div>
 <h3>Global Support</h3>
-<p>Support for financial activity involving multiple countries.</p>
+<p>
+Support for financial activity involving multiple countries.
+</p>
 </div>
 
 </div>
+
 </div>
+
 </section>
+
 
 <section>
 
@@ -1072,7 +1275,8 @@ Services supporting eligible clients with cross-border financial activity.
 <h2>Digital Security</h2>
 
 <p>
-Client access uses modern authentication and database-access controls.
+Client access uses modern authentication and database-access
+controls.
 </p>
 
 </div>
@@ -1118,9 +1322,13 @@ The website should be served over HTTPS in production.
 </ul>
 
 </div>
+
 </div>
+
 </div>
+
 </section>
+
 
 <section class="about" id="about">
 
@@ -1131,17 +1339,21 @@ The website should be served over HTTPS in production.
 <h2>About Imperium</h2>
 
 <p>
-Imperium is focused on providing a modern and professional digital financial-services experience.
+Imperium is focused on providing a modern and professional
+digital financial-services experience.
 </p>
 
 <p>
-Our approach centres on clarity, responsible financial planning, convenient digital services and client-focused support.
+Our approach centres on clarity, responsible financial planning,
+convenient digital services and client-focused support.
 </p>
 
 </div>
 
 </div>
+
 </section>
+
 
 <section class="contact" id="contact">
 
@@ -1160,6 +1372,7 @@ Contact Imperium
 
 </section>
 
+
 <footer>
 
 <p>
@@ -1175,13 +1388,18 @@ Digital financial-services platform.
 </div>
 
 
-<!-- LOGIN -->
+<!-- =====================================================
+LOGIN / REGISTRATION MODAL
+===================================================== -->
 
 <div class="modal" id="loginModal">
 
 <div class="login-box">
 
 <button class="close" onclick="closeLogin()">×</button>
+
+
+<!-- LOGIN -->
 
 <div id="loginScreen">
 
@@ -1193,11 +1411,13 @@ Sign in securely to your Imperium client portal.
 
 <div id="loginMessage" class="message"></div>
 
-<form id="loginForm" onsubmit="signIn(event)">
+<form id="loginForm">
 
 <div class="form-group">
 
-<label for="email">Email Address</label>
+<label for="email">
+Email Address
+</label>
 
 <input
 id="email"
@@ -1209,9 +1429,12 @@ placeholder="Enter your email address"
 
 </div>
 
+
 <div class="form-group">
 
-<label for="password">Password</label>
+<label for="password">
+Password
+</label>
 
 <input
 id="password"
@@ -1223,6 +1446,7 @@ placeholder="Enter your password"
 
 </div>
 
+
 <button
 type="submit"
 id="loginButton"
@@ -1232,6 +1456,7 @@ Sign In
 </button>
 
 </form>
+
 
 <div class="form-options">
 
@@ -1249,6 +1474,8 @@ Create account
 </div>
 
 
+<!-- REGISTRATION -->
+
 <div id="registerScreen" class="hidden">
 
 <h2>Create Client Account</h2>
@@ -1259,11 +1486,13 @@ Create your secure client-access account.
 
 <div id="registerMessage" class="message"></div>
 
-<form id="registerForm" onsubmit="register(event)">
+<form id="registerForm">
 
 <div class="form-group">
 
-<label for="registerName">Full Name</label>
+<label for="registerName">
+Full Name
+</label>
 
 <input
 id="registerName"
@@ -1275,9 +1504,12 @@ placeholder="Full name"
 
 </div>
 
+
 <div class="form-group">
 
-<label for="registerEmail">Email Address</label>
+<label for="registerEmail">
+Email Address
+</label>
 
 <input
 id="registerEmail"
@@ -1289,9 +1521,12 @@ placeholder="Email address"
 
 </div>
 
+
 <div class="form-group">
 
-<label for="registerPassword">Password</label>
+<label for="registerPassword">
+Password
+</label>
 
 <input
 id="registerPassword"
@@ -1304,6 +1539,7 @@ placeholder="Minimum 8 characters"
 
 </div>
 
+
 <button
 type="submit"
 id="registerButton"
@@ -1313,6 +1549,7 @@ Create Account
 </button>
 
 </form>
+
 
 <div class="form-options">
 
@@ -1328,12 +1565,18 @@ onclick="showLogin();return false"
 </div>
 
 </div>
+
 </div>
 
 
-<!-- DASHBOARD -->
+<!-- =====================================================
+CLIENT DASHBOARD
+===================================================== -->
 
-<section class="dashboard" id="dashboard">
+<section
+class="dashboard"
+id="dashboard"
+>
 
 <div class="dashboard-header">
 
@@ -1341,7 +1584,9 @@ onclick="showLogin();return false"
 
 <div>
 
-<h2>Imperium Client Portal</h2>
+<h2>
+Imperium Client Portal
+</h2>
 
 <p id="clientWelcome">
 Authenticated client
@@ -1349,14 +1594,22 @@ Authenticated client
 
 </div>
 
-<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+
+<div
+style="
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap
+"
+>
 
 <button
 id="adminButton"
 class="admin-button"
 onclick="showAdminSection()"
 >
-Admin
+Administration
 </button>
 
 <button
@@ -1369,65 +1622,92 @@ Sign Out
 </div>
 
 </div>
+
 </div>
 
 
 <div class="dashboard-content">
 
-<div id="dashboardMessage" class="message"></div>
+<div
+id="dashboardMessage"
+class="message"
+></div>
 
+
+<!-- BALANCES -->
 
 <div class="balance-grid">
 
 <div class="balance-card">
 
-<span>Current Account</span>
+<span>
+Current Account
+</span>
 
-<h3 id="currentBalance">£0.00</h3>
+<h3 id="currentBalance">
+£0.00
+</h3>
 
 <div
 class="account-number"
 id="currentAccountNumber"
-></div>
+>
+</div>
 
 </div>
 
+
 <div class="balance-card">
 
-<span>Savings Account</span>
+<span>
+Savings Account
+</span>
 
-<h3 id="savingsBalance">£0.00</h3>
+<h3 id="savingsBalance">
+£0.00
+</h3>
 
 <div
 class="account-number"
 id="savingsAccountNumber"
-></div>
+>
+</div>
 
 </div>
 
+
 <div class="balance-card">
 
-<span>Investment Account</span>
+<span>
+Investment Account
+</span>
 
-<h3 id="investmentBalance">£0.00</h3>
+<h3 id="investmentBalance">
+£0.00
+</h3>
 
 <div
 class="account-number"
 id="investmentAccountNumber"
-></div>
-
+>
 </div>
 
 </div>
 
+</div>
+
+
+<!-- ACTIVITY -->
 
 <div class="dashboard-panel">
 
-<h3>Recent Activity</h3>
+<h3>
+Recent Activity
+</h3>
 
 <div id="transactionsList">
 
-<p style="color:#667085">
+<p class="spinner-text">
 Loading account activity...
 </p>
 
@@ -1436,27 +1716,43 @@ Loading account activity...
 </div>
 
 
-<div class="dashboard-panel">
+<!-- SERVICES -->
 
-<h3>Account Services</h3>
+<div
+class="dashboard-panel"
+style="margin-top:20px"
+>
+
+<h3>
+Account Services
+</h3>
 
 <p style="color:#667085">
-Current accounts, savings, investments, transfers and supported digital services.
+Current accounts, savings, investments, transfers and
+supported digital services.
 </p>
 
 </div>
 
 
-<!-- ADMIN -->
+<!-- =====================================================
+ADMINISTRATION
+===================================================== -->
 
-<div id="adminSection" class="admin-section">
+<div
+id="adminSection"
+class="admin-section"
+>
 
 <div class="admin-header">
 
-<h3>Imperium Administration</h3>
+<h3>
+Imperium Administration
+</h3>
 
 <p>
-Authorized administrative area for account management and account activity.
+Authorized administrative tools for managing platform
+account records and reviewing account activity.
 </p>
 
 <div class="admin-status">
@@ -1472,45 +1768,74 @@ Administrator access verified
 </div>
 
 
+<div
+id="adminMessage"
+class="message"
+>
+</div>
+
+
+<div class="admin-card-grid">
+
+<div class="admin-card">
+
+<h4>
+Client Accounts
+</h4>
+
+<p>
+Review accounts associated with registered client profiles.
+</p>
+
+</div>
+
+
+<div class="admin-card">
+
+<h4>
+Transaction Records
+</h4>
+
+<p>
+Review account activity and authorized transaction records.
+</p>
+
+</div>
+
+
+<div class="admin-card">
+
+<h4>
+Audit & Security
+</h4>
+
+<p>
+Administrative activity is intended to be recorded through
+the protected audit system.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ADMIN TOOLS -->
+
 <div class="admin-tools">
 
+<!-- CREATE TRANSACTION -->
 
 <div class="admin-card">
 
-<h4>Client Accounts</h4>
+<h4>
+Create Account Transaction
+</h4>
 
-<p>
-Select an account to review its current balance and manage account activity.
+<p style="margin-bottom:20px">
+Create an authorized account transaction through the
+protected server-side operation.
 </p>
 
-<div id="adminAccountsList">
-
-<p style="color:#667085">
-Loading client accounts...
-</p>
-
-</div>
-
-</div>
-
-
-<div class="admin-card">
-
-<h4>Create Transaction</h4>
-
-<p>
-Create an authorized account transaction.
-</p>
-
-<div
-id="adminTransactionMessage"
-class="message"
-></div>
-
-<form
-id="adminTransactionForm"
-onsubmit="createAdminTransaction(event)"
->
 
 <div class="form-group">
 
@@ -1518,10 +1843,10 @@ onsubmit="createAdminTransaction(event)"
 Account
 </label>
 
-<select id="adminAccount" required>
+<select id="adminAccount">
 
 <option value="">
-Select account
+Loading accounts...
 </option>
 
 </select>
@@ -1535,10 +1860,7 @@ Select account
 Transaction Type
 </label>
 
-<select
-id="adminTransactionType"
-required
->
+<select id="adminTransactionType">
 
 <option value="credit">
 Credit
@@ -1564,7 +1886,6 @@ id="adminAmount"
 type="number"
 min="0.01"
 step="0.01"
-required
 placeholder="0.00"
 >
 
@@ -1580,77 +1901,70 @@ Description
 <input
 id="adminDescription"
 type="text"
-maxlength="160"
-required
+maxlength="200"
 placeholder="Transaction description"
 >
 
 </div>
 
 
-<div class="form-group">
-
-<label for="adminStatus">
-Status
-</label>
-
-<select
-id="adminStatus"
-required
->
-
-<option value="completed">
-Completed
-</option>
-
-<option value="pending">
-Pending
-</option>
-
-<option value="reversed">
-Reversed
-</option>
-
-<option value="failed">
-Failed
-</option>
-
-</select>
-
-</div>
-
-
 <button
-type="submit"
-id="adminTransactionButton"
 class="button full"
+onclick="adminCreateTransaction()"
 >
 Create Transaction
 </button>
 
-</form>
-
 </div>
 
+
+<!-- ACCOUNT INFORMATION -->
 
 <div class="admin-card">
 
-<h4>Account Activity</h4>
+<h4>
+Account Overview
+</h4>
 
-<p>
-Review recent transactions associated with the selected account.
+<p style="margin-bottom:15px">
+Accounts currently available to authorized administration.
 </p>
 
 <div
-id="adminTransactionHistory"
-style="margin-top:20px"
+id="adminAccountsList"
+class="admin-table-wrap"
 >
 
-<p style="color:#667085">
-Select an account to view activity.
+<p class="spinner-text">
+Loading accounts...
 </p>
 
 </div>
+
+</div>
+
+</div>
+
+
+<!-- ADMIN TRANSACTIONS -->
+
+<div
+class="admin-card"
+style="margin-top:20px"
+>
+
+<h4>
+Recent Account Activity
+</h4>
+
+<div
+id="adminTransactionsList"
+class="admin-table-wrap"
+>
+
+<p class="spinner-text">
+Loading transactions...
+</p>
 
 </div>
 
@@ -1659,8 +1973,10 @@ Select an account to view activity.
 
 <div class="admin-notice">
 
-<strong>Administrator security:</strong>
-Privileged account operations are performed through protected database functions. Elevated database credentials are not exposed in this website.
+<strong>Administrative security:</strong>
+Privileged database changes must be performed through
+protected server-side authorization. This page does not
+contain a Supabase service-role key or other elevated secret.
 
 </div>
 
@@ -1674,7 +1990,7 @@ Privileged account operations are performed through protected database functions
 <script>
 
 /* =========================================================
-SUPABASE
+SUPABASE CONFIGURATION
 ========================================================= */
 
 const SUPABASE_URL =
@@ -1683,7 +1999,9 @@ const SUPABASE_URL =
 const SUPABASE_PUBLISHABLE_KEY =
 "sb_publishable_Fl3j2OjphHCKuZQpFZQmrQ_jd5dnmQ2";
 
-const { createClient } = supabase;
+const {
+createClient
+} = supabase;
 
 const supabaseClient =
 createClient(
@@ -1718,13 +2036,8 @@ const adminSection =
 document.getElementById("adminSection");
 
 
-let adminAccounts = [];
-
-let selectedAdminAccount = null;
-
-
 /* =========================================================
-LOGIN
+LOGIN MODAL
 ========================================================= */
 
 function openLogin(){
@@ -1737,11 +2050,13 @@ clearMessages();
 
 }
 
+
 function closeLogin(){
 
 loginModal.classList.remove("show");
 
 }
+
 
 function showLogin(){
 
@@ -1753,6 +2068,7 @@ clearMessages();
 
 }
 
+
 function showRegistration(){
 
 loginScreen.classList.add("hidden");
@@ -1762,6 +2078,7 @@ registerScreen.classList.remove("hidden");
 clearMessages();
 
 }
+
 
 function clearMessages(){
 
@@ -1786,14 +2103,22 @@ registerMessage.textContent="";
 MESSAGE
 ========================================================= */
 
-function showMessage(id,text,type){
+function showMessage(
+id,
+text,
+type
+){
 
 const element =
 document.getElementById(id);
 
+if(!element){
+return;
+}
+
 element.textContent=text;
 
-element.className =
+element.className=
 "message "+type;
 
 }
@@ -1808,15 +2133,20 @@ async function register(event){
 event.preventDefault();
 
 const name =
-document.getElementById("registerName")
-.value.trim();
+document
+.getElementById("registerName")
+.value
+.trim();
 
 const email =
-document.getElementById("registerEmail")
-.value.trim();
+document
+.getElementById("registerEmail")
+.value
+.trim();
 
 const password =
-document.getElementById("registerPassword")
+document
+.getElementById("registerPassword")
 .value;
 
 const button =
@@ -1824,7 +2154,8 @@ document.getElementById("registerButton");
 
 button.disabled=true;
 
-button.textContent="Creating account...";
+button.textContent=
+"Creating account...";
 
 
 try{
@@ -1857,13 +2188,15 @@ throw error;
 
 if(data.session){
 
+closeLogin();
+
 await loadDashboard();
 
 }else{
 
 showMessage(
 "registerMessage",
-"Account created. Please check your email if confirmation is required, then sign in.",
+"Account created. Please check your email if email confirmation is required, then sign in.",
 "success"
 );
 
@@ -1886,7 +2219,8 @@ finally{
 
 button.disabled=false;
 
-button.textContent="Create Account";
+button.textContent=
+"Create Account";
 
 }
 
@@ -1902,11 +2236,14 @@ async function signIn(event){
 event.preventDefault();
 
 const email =
-document.getElementById("email")
-.value.trim();
+document
+.getElementById("email")
+.value
+.trim();
 
 const password =
-document.getElementById("password")
+document
+.getElementById("password")
 .value;
 
 const button =
@@ -1914,7 +2251,8 @@ document.getElementById("loginButton");
 
 button.disabled=true;
 
-button.textContent="Signing in...";
+button.textContent=
+"Signing in...";
 
 
 try{
@@ -1945,6 +2283,14 @@ closeLogin();
 
 await loadDashboard();
 
+}else{
+
+showMessage(
+"loginMessage",
+"Sign in was not completed. Please try again.",
+"error"
+);
+
 }
 
 }
@@ -1964,7 +2310,8 @@ finally{
 
 button.disabled=false;
 
-button.textContent="Sign In";
+button.textContent=
+"Sign In";
 
 }
 
@@ -1972,7 +2319,7 @@ button.textContent="Sign In";
 
 
 /* =========================================================
-ADMIN CHECK
+ADMIN AUTHORIZATION
 ========================================================= */
 
 async function checkAdminAccess(user){
@@ -1980,6 +2327,7 @@ async function checkAdminAccess(user){
 adminButton.style.display="none";
 
 adminSection.classList.remove("show");
+
 
 if(!user || !user.id){
 
@@ -2000,7 +2348,10 @@ await supabaseClient
 
 .select("user_id")
 
-.eq("user_id",user.id)
+.eq(
+"user_id",
+user.id
+)
 
 .maybeSingle();
 
@@ -2022,11 +2373,12 @@ data &&
 data.user_id === user.id
 ){
 
-adminButton.style.display="inline-block";
+adminButton.style.display=
+"inline-block";
 
 document.getElementById(
 "adminStatusText"
-).textContent =
+).textContent=
 "Administrator access verified";
 
 return true;
@@ -2039,7 +2391,10 @@ return false;
 }
 catch(error){
 
-console.error(error);
+console.error(
+"Admin authorization error:",
+error
+);
 
 return false;
 
@@ -2055,10 +2410,13 @@ SHOW ADMIN
 async function showAdminSection(){
 
 const {
-data:{user},
+data:{
+user
+},
 error
 } =
 await supabaseClient.auth.getUser();
+
 
 if(error || !user){
 
@@ -2073,10 +2431,6 @@ await checkAdminAccess(user);
 
 if(!isAdmin){
 
-adminSection.classList.remove("show");
-
-adminButton.style.display="none";
-
 return;
 
 }
@@ -2085,9 +2439,11 @@ return;
 adminSection.classList.toggle("show");
 
 
-if(adminSection.classList.contains("show")){
+if(
+adminSection.classList.contains("show")
+){
 
-await loadAdminAccounts();
+await loadAdminData();
 
 adminSection.scrollIntoView({
 behavior:"smooth",
@@ -2108,7 +2464,9 @@ async function loadDashboard(){
 try{
 
 const {
-data:{user},
+data:{
+user
+},
 error:userError
 } =
 await supabaseClient.auth.getUser();
@@ -2136,10 +2494,12 @@ dashboard.classList.add("show");
 document.getElementById(
 "clientWelcome"
 ).textContent =
+user.user_metadata?.full_name ||
 user.email ||
 "Authenticated client";
 
 
+const isAdmin =
 await checkAdminAccess(user);
 
 
@@ -2152,7 +2512,7 @@ await supabaseClient
 .from("accounts")
 
 .select(
-"id,account_type,account_number,currency,balance,status"
+"id,profile_id,account_type,account_number,currency,balance,status,created_at"
 )
 
 .eq(
@@ -2180,14 +2540,19 @@ accounts || []
 );
 
 
-if(accounts && accounts.length){
+if(
+accounts &&
+accounts.length
+){
 
 const accountIds =
 accounts.map(
 account => account.id
 );
 
-await loadTransactions(accountIds);
+await loadTransactions(
+accountIds
+);
 
 }else{
 
@@ -2195,6 +2560,13 @@ document.getElementById(
 "transactionsList"
 ).innerHTML =
 '<p style="color:#667085">No accounts are currently associated with this client.</p>';
+
+}
+
+
+if(isAdmin){
+
+await loadAdminData();
 
 }
 
@@ -2228,98 +2600,117 @@ function displayAccounts(accounts){
 const current =
 accounts.find(
 a =>
-String(a.account_type || "")
-.toLowerCase()==="current"
+String(
+a.account_type || ""
+).toLowerCase()
+===
+"current"
 );
+
 
 const savings =
 accounts.find(
 a =>
-String(a.account_type || "")
-.toLowerCase()==="savings"
+String(
+a.account_type || ""
+).toLowerCase()
+===
+"savings"
 );
+
 
 const investment =
 accounts.find(
 a =>
-String(a.account_type || "")
-.toLowerCase()==="investment"
+String(
+a.account_type || ""
+).toLowerCase()
+===
+"investment"
 );
 
-
-if(current){
 
 document.getElementById(
 "currentBalance"
 ).textContent =
+current
+?
 formatMoney(
 current.balance,
 current.currency
-);
+)
+:
+"£0.00";
+
 
 document.getElementById(
 "currentAccountNumber"
 ).textContent =
-current.account_number
+current?.account_number
 ?
-"Account: "+current.account_number
+"Account: "+
+current.account_number
 :
 "";
 
-}
-
-
-if(savings){
 
 document.getElementById(
 "savingsBalance"
 ).textContent =
+savings
+?
 formatMoney(
 savings.balance,
 savings.currency
-);
+)
+:
+"£0.00";
+
 
 document.getElementById(
 "savingsAccountNumber"
 ).textContent =
-savings.account_number
+savings?.account_number
 ?
-"Account: "+savings.account_number
+"Account: "+
+savings.account_number
 :
 "";
 
-}
-
-
-if(investment){
 
 document.getElementById(
 "investmentBalance"
 ).textContent =
+investment
+?
 formatMoney(
 investment.balance,
 investment.currency
-);
+)
+:
+"£0.00";
+
 
 document.getElementById(
 "investmentAccountNumber"
 ).textContent =
-investment.account_number
+investment?.account_number
 ?
-"Account: "+investment.account_number
+"Account: "+
+investment.account_number
 :
 "";
-
-}
 
 }
 
 
 /* =========================================================
-CLIENT TRANSACTIONS
+LOAD TRANSACTIONS
 ========================================================= */
 
-async function loadTransactions(accountIds){
+async function loadTransactions(
+accountIds
+){
 
 const {
 data:transactions,
@@ -2377,15 +2768,16 @@ return;
 }
 
 
-document.getElementById(
-"transactionsList"
-).innerHTML =
-
-transactions.map(
+const html =
+transactions
+.map(
 transaction => {
 
 const amount =
-Number(transaction.amount);
+Number(
+transaction.amount
+);
+
 
 const positive =
 amount >= 0;
@@ -2399,7 +2791,8 @@ return `
 
 <strong>
 ${escapeHtml(
-transaction.description
+transaction.description ||
+"Account transaction"
 )}
 </strong>
 
@@ -2408,7 +2801,8 @@ transaction.description
 <small style="color:#98a2b3">
 
 ${escapeHtml(
-transaction.transaction_type || ""
+transaction.transaction_type ||
+""
 )}
 
 ·
@@ -2429,7 +2823,13 @@ positive
 "negative"
 }">
 
-${positive ? "+" : ""}
+${
+positive
+?
+"+"
+:
+""
+}
 
 ${formatMoney(
 amount,
@@ -2443,46 +2843,30 @@ amount,
 `;
 
 }
-).join("");
+)
+.join("");
+
+
+document.getElementById(
+"transactionsList"
+).innerHTML =
+html;
 
 }
 
 
 /* =========================================================
-ADMIN ACCOUNTS
+ADMIN DATA
 ========================================================= */
 
-async function loadAdminAccounts(){
-
-const list =
-document.getElementById(
-"adminAccountsList"
-);
-
-const select =
-document.getElementById(
-"adminAccount"
-);
-
-
-if(!list || !select){
-
-return;
-
-}
-
-
-list.innerHTML =
-'<p style="color:#667085">Loading client accounts...</p>';
-
-select.innerHTML =
-'<option value="">Select account</option>';
-
+async function loadAdminData(){
 
 try{
 
 const {
-data:{user},
+data:{
+user
+},
 error:userError
 } =
 await supabaseClient.auth.getUser();
@@ -2490,9 +2874,7 @@ await supabaseClient.auth.getUser();
 
 if(userError || !user){
 
-throw new Error(
-"Administrator authentication required."
-);
+return;
 
 }
 
@@ -2503,15 +2885,13 @@ await checkAdminAccess(user);
 
 if(!isAdmin){
 
-throw new Error(
-"Administrator authorization required."
-);
+return;
 
 }
 
 
 const {
-data,
+data:accounts,
 error
 } =
 await supabaseClient
@@ -2519,7 +2899,7 @@ await supabaseClient
 .from("accounts")
 
 .select(
-"id,profile_id,account_type,account_number,currency,balance,status"
+"id,profile_id,account_type,account_number,currency,balance,status,created_at"
 )
 
 .order(
@@ -2537,105 +2917,50 @@ throw error;
 }
 
 
-adminAccounts =
-data || [];
+populateAdminAccountSelect(
+accounts || []
+);
+
+displayAdminAccounts(
+accounts || []
+);
 
 
-if(!adminAccounts.length){
-
-list.innerHTML =
-'<p style="color:#667085">No client accounts found.</p>';
-
-return;
-
-}
+const accountIds =
+(accounts || [])
+.map(
+account => account.id
+);
 
 
-adminAccounts.forEach(
-account => {
+if(accountIds.length){
 
-const option =
-document.createElement("option");
+await loadAdminTransactions(
+accountIds
+);
 
-option.value =
-account.id;
+}else{
 
-option.textContent =
-`${account.account_type || "Account"} • ${account.account_number || account.id}`;
-
-select.appendChild(option);
-
-});
-
-
-list.innerHTML =
-adminAccounts.map(
-account => {
-
-return `
-
-<div
-class="admin-account"
-data-account-id="${escapeHtml(account.id)}"
-onclick="selectAdminAccount('${escapeHtml(account.id)}')"
->
-
-<div class="admin-account-title">
-
-${escapeHtml(
-account.account_type || "Account"
-)}
-
-</div>
-
-<div class="admin-account-meta">
-
-Account:
-${escapeHtml(
-account.account_number || "Unavailable"
-)}
-
-<br>
-
-Client:
-${escapeHtml(
-account.profile_id
-)}
-
-</div>
-
-<div class="admin-account-balance">
-
-${formatMoney(
-account.balance,
-account.currency
-)}
-
-</div>
-
-</div>
-
-`;
+document.getElementById(
+"adminTransactionsList"
+).innerHTML =
+'<p style="color:#667085">No account transactions found.</p>';
 
 }
-).join("");
-
 
 }
 catch(error){
 
 console.error(
-"Admin account loading failed:",
+"Admin data error:",
 error
 );
 
-list.innerHTML =
-`<p style="color:#a33d3d">
-${escapeHtml(
-error.message ||
-"Unable to load client accounts."
-)}
-</p>`;
+showMessage(
+"adminMessage",
+"Unable to load administration data.",
+"error"
+);
 
 }
 
@@ -2643,95 +2968,181 @@ error.message ||
 
 
 /* =========================================================
-SELECT ADMIN ACCOUNT
+ADMIN ACCOUNT SELECT
 ========================================================= */
 
-function selectAdminAccount(accountId){
-
-selectedAdminAccount =
-adminAccounts.find(
-account =>
-account.id === accountId
-);
-
-
-if(!selectedAdminAccount){
-
-return;
-
-}
-
+function populateAdminAccountSelect(
+accounts
+){
 
 const select =
 document.getElementById(
 "adminAccount"
 );
 
-if(select){
 
-select.value =
-accountId;
+if(!accounts.length){
 
-}
-
-
-document
-.querySelectorAll(".admin-account")
-.forEach(
-element => {
-
-element.classList.remove("active");
-
-});
-
-
-const selectedElement =
-document.querySelector(
-`.admin-account[data-account-id="${CSS.escape(accountId)}"]`
-);
-
-
-if(selectedElement){
-
-selectedElement.classList.add("active");
-
-}
-
-
-loadAdminTransactionHistory(
-accountId
-);
-
-}
-
-
-/* =========================================================
-ADMIN TRANSACTION HISTORY
-========================================================= */
-
-async function loadAdminTransactionHistory(accountId){
-
-const container =
-document.getElementById(
-"adminTransactionHistory"
-);
-
-
-if(!container){
+select.innerHTML =
+'<option value="">No accounts available</option>';
 
 return;
 
 }
 
 
+select.innerHTML =
+'<option value="">Select an account</option>' +
+accounts
+.map(
+account => `
+
+<option value="${escapeHtml(account.id)}">
+
+${escapeHtml(
+account.account_number ||
+"Account"
+)}
+
+—
+${escapeHtml(
+account.account_type ||
+""
+)}
+
+—
+${formatMoney(
+account.balance,
+account.currency
+)}
+
+</option>
+
+`
+)
+.join("");
+
+}
+
+
+/* =========================================================
+ADMIN ACCOUNT TABLE
+========================================================= */
+
+function displayAdminAccounts(
+accounts
+){
+
+const container =
+document.getElementById(
+"adminAccountsList"
+);
+
+
+if(!accounts.length){
+
 container.innerHTML =
-'<p style="color:#667085">Loading activity...</p>';
+'<p style="color:#667085">No accounts found.</p>';
+
+return;
+
+}
 
 
-try{
+container.innerHTML = `
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>Account</th>
+<th>Type</th>
+<th>Currency</th>
+<th>Balance</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${
+accounts
+.map(
+account => `
+
+<tr>
+
+<td>
+${escapeHtml(
+account.account_number ||
+"—"
+)}
+</td>
+
+<td>
+${escapeHtml(
+account.account_type ||
+"—"
+)}
+</td>
+
+<td>
+${escapeHtml(
+account.currency ||
+"GBP"
+)}
+</td>
+
+<td>
+${formatMoney(
+account.balance,
+account.currency
+)}
+</td>
+
+<td>
+
+<span class="status-pill">
+
+${escapeHtml(
+account.status ||
+"active"
+)}
+
+</span>
+
+</td>
+
+</tr>
+
+`
+)
+.join("")
+}
+
+</tbody>
+
+</table>
+
+`;
+
+}
+
+
+/* =========================================================
+ADMIN TRANSACTIONS
+========================================================= */
+
+async function loadAdminTransactions(
+accountIds
+){
 
 const {
-data,
+data:transactions,
 error
 } =
 await supabaseClient
@@ -2739,12 +3150,12 @@ await supabaseClient
 .from("transactions")
 
 .select(
-"id,transaction_reference,transaction_type,description,amount,balance_after,status,created_at"
+"id,account_id,transaction_reference,transaction_type,description,amount,balance_after,status,created_at"
 )
 
-.eq(
+.in(
 "account_id",
-accountId
+accountIds
 )
 
 .order(
@@ -2754,19 +3165,31 @@ ascending:false
 }
 )
 
-.limit(20);
+.limit(50);
 
 
 if(error){
 
-throw error;
+console.error(error);
+
+document.getElementById(
+"adminTransactionsList"
+).innerHTML =
+'<p style="color:#a33d3d">Unable to load transactions.</p>';
+
+return;
 
 }
 
 
-if(!data || !data.length){
+if(
+!transactions ||
+!transactions.length
+){
 
-container.innerHTML =
+document.getElementById(
+"adminTransactionsList"
+).innerHTML =
 '<p style="color:#667085">No transactions found.</p>';
 
 return;
@@ -2774,155 +3197,168 @@ return;
 }
 
 
-container.innerHTML =
-data.map(
+document.getElementById(
+"adminTransactionsList"
+).innerHTML = `
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+<th>Reference</th>
+<th>Description</th>
+<th>Amount</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+${
+transactions
+.map(
 transaction => {
 
 const amount =
-Number(transaction.amount);
-
-const type =
-String(
-transaction.transaction_type || ""
-).toLowerCase();
-
-const amountClass =
-amount >= 0
-?
-"admin-credit"
-:
-"admin-debit";
-
+Number(
+transaction.amount
+);
 
 return `
 
-<div class="admin-history-item">
+<tr>
 
-<div class="admin-history-top">
-
-<div>
-
-<div class="admin-history-description">
-
-${escapeHtml(
-transaction.description
-)}
-
-</div>
-
-<div class="admin-history-date">
-
-${escapeHtml(
-transaction.transaction_reference || ""
-)}
-
-·
-
+<td>
 ${formatDate(
 transaction.created_at
 )}
+</td>
 
-</div>
+<td>
+${escapeHtml(
+transaction.transaction_reference ||
+"—"
+)}
+</td>
 
-</div>
+<td>
+${escapeHtml(
+transaction.description ||
+"—"
+)}
+</td>
 
-<div class="${amountClass}">
+<td class="${
+amount >= 0
+?
+"positive"
+:
+"negative"
+}">
 
-${amount >= 0 ? "+" : ""}
+${
+amount >= 0
+?
+"+"
+:
+""
+}
 
 ${formatMoney(
 amount,
-selectedAdminAccount?.currency || "GBP"
+"GBP"
 )}
 
-</div>
+</td>
 
-</div>
+<td>
 
-<div class="admin-history-date">
+<span class="status-pill">
 
-Balance after:
-${formatMoney(
-transaction.balance_after,
-selectedAdminAccount?.currency || "GBP"
-)}
-
-·
-
-Status:
 ${escapeHtml(
-transaction.status || ""
+transaction.status ||
+"posted"
 )}
 
-</div>
+</span>
 
-</div>
+</td>
+
+</tr>
 
 `;
 
 }
-).join("");
-
-
+)
+.join("")
 }
-catch(error){
 
-console.error(error);
+</tbody>
 
-container.innerHTML =
-'<p style="color:#a33d3d">Unable to load account activity.</p>';
+</table>
 
-}
+`;
 
 }
 
 
 /* =========================================================
-CREATE ADMIN TRANSACTION
+ADMIN CREATE TRANSACTION
 ========================================================= */
 
-async function createAdminTransaction(event){
+async function adminCreateTransaction(){
 
-event.preventDefault();
+showMessage(
+"adminMessage",
+"",
+""
+);
 
 
 const accountId =
-document.getElementById(
+document
+.getElementById(
 "adminAccount"
-).value;
+)
+.value;
 
-const transactionType =
-document.getElementById(
+
+const type =
+document
+.getElementById(
 "adminTransactionType"
-).value;
+)
+.value;
+
 
 const amount =
 Number(
-document.getElementById(
+document
+.getElementById(
 "adminAmount"
-).value
+)
+.value
 );
+
 
 const description =
-document.getElementById(
+document
+.getElementById(
 "adminDescription"
-).value
+)
+.value
 .trim();
-
-const status =
-document.getElementById(
-"adminStatus"
-).value;
-
-const button =
-document.getElementById(
-"adminTransactionButton"
-);
 
 
 if(!accountId){
 
-showAdminTransactionMessage(
+showMessage(
+"adminMessage",
 "Select an account first.",
 "error"
 );
@@ -2932,10 +3368,14 @@ return;
 }
 
 
-if(!amount || amount <= 0){
+if(
+!Number.isFinite(amount) ||
+amount <= 0
+){
 
-showAdminTransactionMessage(
-"Enter a valid amount.",
+showMessage(
+"adminMessage",
+"Enter a valid transaction amount.",
 "error"
 );
 
@@ -2946,7 +3386,8 @@ return;
 
 if(!description){
 
-showAdminTransactionMessage(
+showMessage(
+"adminMessage",
 "Enter a transaction description.",
 "error"
 );
@@ -2956,13 +3397,37 @@ return;
 }
 
 
-button.disabled=true;
+/*
+IMPORTANT:
 
-button.textContent=
-"Creating transaction...";
+This intentionally calls a protected PostgreSQL RPC
+rather than attempting to modify account balances
+directly from the browser.
+
+The RPC should:
+1. Verify auth.uid()
+2. Verify that auth.uid() is an administrator
+3. Lock the selected account
+4. Validate the transaction
+5. Calculate the new balance server-side
+6. Insert the transaction
+7. Update the account balance
+8. Write an audit_log entry
+9. Return success/failure
+
+Do not put a service-role key in this file.
+*/
 
 
 try{
+
+const signedAmount =
+type === "debit"
+?
+-Math.abs(amount)
+:
+Math.abs(amount);
+
 
 const {
 data,
@@ -2972,10 +3437,9 @@ await supabaseClient.rpc(
 "admin_create_transaction",
 {
 p_account_id:accountId,
-p_transaction_type:transactionType,
-p_amount:amount,
-p_description:description,
-p_status:status
+p_amount:signedAmount,
+p_transaction_type:type,
+p_description:description
 }
 );
 
@@ -2987,17 +3451,9 @@ throw error;
 }
 
 
-if(!data || data.success !== true){
-
-throw new Error(
-"Transaction was not completed."
-);
-
-}
-
-
-showAdminTransactionMessage(
-`Transaction ${data.transaction_reference} created successfully. New balance: ${formatMoney(data.balance_after, selectedAdminAccount?.currency || "GBP")}`,
+showMessage(
+"adminMessage",
+"Transaction record created successfully.",
 "success"
 );
 
@@ -3006,66 +3462,33 @@ document.getElementById(
 "adminAmount"
 ).value="";
 
+
 document.getElementById(
 "adminDescription"
 ).value="";
 
 
-await loadAdminAccounts();
+await loadAdminData();
 
-selectAdminAccount(accountId);
+await loadDashboard();
 
 }
 catch(error){
 
 console.error(
-"Admin transaction failed:",
+"Administrative transaction error:",
 error
 );
 
-showAdminTransactionMessage(
+
+showMessage(
+"adminMessage",
 error.message ||
-"Unable to create transaction.",
+"The protected transaction operation could not be completed.",
 "error"
 );
 
 }
-finally{
-
-button.disabled=false;
-
-button.textContent=
-"Create Transaction";
-
-}
-
-}
-
-
-/* =========================================================
-ADMIN MESSAGE
-========================================================= */
-
-function showAdminTransactionMessage(
-text,
-type
-){
-
-const message =
-document.getElementById(
-"adminTransactionMessage"
-);
-
-if(!message){
-
-return;
-
-}
-
-message.textContent=text;
-
-message.className =
-"message "+type;
 
 }
 
@@ -3109,13 +3532,16 @@ AUTH STATE
 ========================================================= */
 
 supabaseClient.auth.onAuthStateChange(
-async (event,session)=>{
+async (
+event,
+session
+) => {
 
 if(session){
 
 if(
-event==="SIGNED_IN" ||
-event==="INITIAL_SESSION"
+event === "SIGNED_IN" ||
+event === "INITIAL_SESSION"
 ){
 
 await loadDashboard();
@@ -3148,25 +3574,47 @@ currency
 ){
 
 const amount =
-Number(value || 0);
+Number(
+value || 0
+);
 
+
+let selectedCurrency =
+currency ||
+"GBP";
+
+
+try{
 
 return new Intl.NumberFormat(
 "en-GB",
 {
 style:"currency",
-currency:currency || "GBP"
+currency:selectedCurrency
 }
 ).format(amount);
+
+}
+catch(error){
+
+return (
+selectedCurrency +
+" " +
+amount.toFixed(2)
+);
+
+}
 
 }
 
 
 /* =========================================================
-DATE
+FORMAT DATE
 ========================================================= */
 
-function formatDate(value){
+function formatDate(
+value
+){
 
 if(!value){
 
@@ -3175,9 +3623,22 @@ return "";
 }
 
 
-return new Date(
-value
-).toLocaleDateString(
+const date =
+new Date(value);
+
+
+if(
+Number.isNaN(
+date.getTime()
+)
+){
+
+return "";
+
+}
+
+
+return date.toLocaleDateString(
 "en-GB",
 {
 day:"2-digit",
@@ -3190,10 +3651,12 @@ year:"numeric"
 
 
 /* =========================================================
-HTML ESCAPE
+HTML ESCAPING
 ========================================================= */
 
-function escapeHtml(value){
+function escapeHtml(
+value
+){
 
 return String(
 value ?? ""
@@ -3228,7 +3691,7 @@ value ?? ""
 
 
 /* =========================================================
-MODAL CLOSE
+CLOSE MODAL OUTSIDE
 ========================================================= */
 
 loginModal.addEventListener(
@@ -3236,7 +3699,8 @@ loginModal.addEventListener(
 function(event){
 
 if(
-event.target === loginModal
+event.target ===
+loginModal
 ){
 
 closeLogin();
@@ -3248,7 +3712,47 @@ closeLogin();
 
 
 /* =========================================================
-INITIAL SESSION
+ESC KEY
+========================================================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(
+event.key === "Escape"
+){
+
+closeLogin();
+
+}
+
+}
+);
+
+
+/* =========================================================
+FORM EVENTS
+========================================================= */
+
+document
+.getElementById("loginForm")
+.addEventListener(
+"submit",
+signIn
+);
+
+
+document
+.getElementById("registerForm")
+.addEventListener(
+"submit",
+register
+);
+
+
+/* =========================================================
+INITIAL SESSION CHECK
 ========================================================= */
 
 (async function(){
@@ -3256,7 +3760,9 @@ INITIAL SESSION
 try{
 
 const {
-data:{session}
+data:{
+session
+}
 } =
 await supabaseClient.auth.getSession();
 
