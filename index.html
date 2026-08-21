@@ -510,8 +510,102 @@ margin-top:5px
 
 
 /* =========================================================
+ADMIN AREA
+========================================================= */
+
+.admin-button{
+display:none;
+background:#c39a4a;
+color:#fff;
+border:0;
+padding:10px 16px;
+border-radius:6px;
+font-weight:700;
+cursor:pointer
+}
+
+.admin-button:hover{
+background:#ae8439
+}
+
+.admin-section{
+display:none;
+margin-top:30px
+}
+
+.admin-section.show{
+display:block
+}
+
+.admin-header{
+background:#102747;
+color:#fff;
+border-radius:14px;
+padding:28px;
+margin-bottom:20px
+}
+
+.admin-header h3{
+font-size:24px;
+margin-bottom:6px
+}
+
+.admin-header p{
+color:#dbe6f4;
+font-size:14px
+}
+
+.admin-status{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:16px;
+font-size:13px
+}
+
+.admin-dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#49a078
+}
+
+.admin-card-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+
+.admin-card{
+background:#fff;
+border:1px solid #e4e8ef;
+border-radius:14px;
+padding:25px
+}
+
+.admin-card h4{
+color:#102747;
+margin-bottom:8px
+}
+
+.admin-card p{
+color:#667085;
+font-size:14px
+}
+
+.admin-notice{
+margin-top:20px;
+background:#fff9ed;
+border:1px solid #ead7aa;
+border-radius:10px;
+padding:16px;
+color:#72551f;
+font-size:13px
+}
+
+
+/* =========================================================
 MOBILE NAVIGATION
-Client Access stays visible on phones
 ========================================================= */
 
 @media(max-width:900px){
@@ -541,7 +635,7 @@ grid-template-columns:1fr
 font-size:42px
 }
 
-.grid,.balance-grid{
+.grid,.balance-grid,.admin-card-grid{
 grid-template-columns:1fr 1fr
 }
 
@@ -582,7 +676,7 @@ padding:60px 18px
 font-size:30px
 }
 
-.grid,.balance-grid,.security-list{
+.grid,.balance-grid,.security-list,.admin-card-grid{
 grid-template-columns:1fr
 }
 
@@ -591,6 +685,11 @@ padding:27px 22px
 }
 
 .client-btn{
+padding:9px 12px;
+font-size:12px
+}
+
+.admin-button{
 padding:9px 12px;
 font-size:12px
 }
@@ -1021,8 +1120,6 @@ LOGIN MODAL
 </button>
 
 
-<!-- LOGIN -->
-
 <div id="loginScreen">
 
 <h2>Client Access</h2>
@@ -1095,8 +1192,6 @@ Create account
 
 </div>
 
-
-<!-- REGISTRATION -->
 
 <div id="registerScreen" class="hidden">
 
@@ -1218,12 +1313,24 @@ Authenticated client
 
 </div>
 
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+
+<button
+id="adminButton"
+class="admin-button"
+onclick="showAdminSection()"
+>
+Admin
+</button>
+
 <button
 class="signout"
 onclick="signOut()"
 >
 Sign Out
 </button>
+
+</div>
 
 </div>
 </div>
@@ -1326,6 +1433,91 @@ Current accounts, savings, investments, transfers and supported digital services
 
 </div>
 
+
+<!-- =========================================================
+ADMIN SECTION
+========================================================= -->
+
+<div
+id="adminSection"
+class="admin-section"
+>
+
+<div class="admin-header">
+
+<h3>
+Imperium Administration
+</h3>
+
+<p>
+Authorized administrative area for the authenticated Imperium administrator.
+</p>
+
+<div class="admin-status">
+
+<span class="admin-dot"></span>
+
+<span id="adminStatusText">
+Administrator access verified
+</span>
+
+</div>
+
+</div>
+
+
+<div class="admin-card-grid">
+
+<div class="admin-card">
+
+<h4>
+Client Management
+</h4>
+
+<p>
+Authorized client-management tools can be connected here through protected server-side operations.
+</p>
+
+</div>
+
+
+<div class="admin-card">
+
+<h4>
+Account Overview
+</h4>
+
+<p>
+Account-management functionality should use protected database policies and server-side authorization.
+</p>
+
+</div>
+
+
+<div class="admin-card">
+
+<h4>
+Audit & Security
+</h4>
+
+<p>
+Administrative activity should be recorded through the existing audit logging system.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="admin-notice">
+
+<strong>Administrator security:</strong>
+This browser interface does not contain a Supabase service-role key or other elevated secret. Privileged database operations should be performed through authenticated server-side functions.
+
+</div>
+
+</div>
+
 </div>
 
 </section>
@@ -1370,6 +1562,12 @@ document.getElementById("dashboard");
 
 const mainWebsite =
 document.getElementById("mainWebsite");
+
+const adminButton =
+document.getElementById("adminButton");
+
+const adminSection =
+document.getElementById("adminSection");
 
 
 /* =========================================================
@@ -1642,6 +1840,129 @@ button.textContent="Sign In";
 
 
 /* =========================================================
+ADMIN AUTHORIZATION CHECK
+========================================================= */
+
+async function checkAdminAccess(user){
+
+adminButton.style.display="none";
+
+adminSection.classList.remove("show");
+
+if(!user || !user.id){
+
+return false;
+
+}
+
+try{
+
+const {
+data,
+error
+} =
+await supabaseClient
+
+.from("admin_users")
+
+.select("user_id")
+
+.eq("user_id",user.id)
+
+.maybeSingle();
+
+
+if(error){
+
+console.error(
+"Admin authorization check failed:",
+error
+);
+
+return false;
+
+}
+
+
+if(
+data &&
+data.user_id === user.id
+){
+
+adminButton.style.display="inline-block";
+
+document.getElementById(
+"adminStatusText"
+).textContent =
+"Administrator access verified";
+
+return true;
+
+}
+
+return false;
+
+}
+catch(error){
+
+console.error(
+"Admin authorization error:",
+error
+);
+
+return false;
+
+}
+
+}
+
+
+/* =========================================================
+SHOW ADMIN SECTION
+========================================================= */
+
+async function showAdminSection(){
+
+const {
+data:{user},
+error
+} =
+await supabaseClient.auth.getUser();
+
+if(error || !user){
+
+return;
+
+}
+
+const isAdmin =
+await checkAdminAccess(user);
+
+if(!isAdmin){
+
+adminSection.classList.remove("show");
+
+adminButton.style.display="none";
+
+return;
+
+}
+
+adminSection.classList.toggle("show");
+
+if(adminSection.classList.contains("show")){
+
+adminSection.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+}
+
+
+/* =========================================================
 LOAD DASHBOARD
 ========================================================= */
 
@@ -1676,6 +1997,15 @@ document.getElementById(
 ).textContent =
 user.email ||
 "Authenticated client";
+
+
+/*
+Check administrator authorization.
+The admin_users table contains the authorized
+user IDs. No service-role key is exposed here.
+*/
+
+await checkAdminAccess(user);
 
 
 const {
@@ -2009,6 +2339,10 @@ console.error(error);
 
 dashboard.classList.remove("show");
 
+adminSection.classList.remove("show");
+
+adminButton.style.display="none";
+
 mainWebsite.style.display="block";
 
 window.scrollTo(
@@ -2040,6 +2374,10 @@ await loadDashboard();
 }else{
 
 dashboard.classList.remove("show");
+
+adminSection.classList.remove("show");
+
+adminButton.style.display="none";
 
 mainWebsite.style.display="block";
 
